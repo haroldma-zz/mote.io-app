@@ -86,8 +86,6 @@
     <gap:splash src="images/splashes/splash_ipad@2x.png" gap:platform="ios" width="2048" height="1496" />
     <gap:splash src="images/splashes/splash_ipad-p@2x.png" gap:platform="ios" width="1536" height="2008" />
 
-    <gap:splash src="images/splashes/splash_Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
-
     <!-- Android -->
     <gap:splash src="images/splashes/splash_ldpi-p.png" gap:platform="android" gap:density="ldpi" width="200" height="320" />
     <gap:splash src="images/splashes/splash_mdpi-p.png" gap:platform="android" gap:density="mdpi" width="320" height="480" />
