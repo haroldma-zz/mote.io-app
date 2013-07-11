@@ -224,9 +224,9 @@ var App = function () {
 
   };
 
-  self.listen = function (roomName) {
+  self.listen = function () {
 
-    self.channel = io.connect(self.remote_location + '/' + roomName, {'force new connection': true, 'secure': true});
+    self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true});
 
     self.channel.on('update-config', function (data) {
       console.log('update-config')
@@ -359,7 +359,7 @@ var App = function () {
               self.set('login', null)
             }
 
-            self.listen(response.user._id);
+            self.listen();
 
             console.log('waiting for sync')
             $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');

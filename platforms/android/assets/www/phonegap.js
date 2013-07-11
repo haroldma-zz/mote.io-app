@@ -6944,4 +6944,4 @@ require('cordova/channel').onNativeReady.fire();
 }(window));
 
 
-})();
+})();var PhoneGap = cordova;

@@ -8,3 +8,63 @@
 2013-07-11 09:59:05.061 Moteio[61912:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
 2013-07-11 09:59:05.303 Moteio[61912:c07] ready
 2013-07-11 09:59:05.332 Moteio[61912:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/1ED45DF7-ABB3-4DE1-9C0A-D2AD5C35E095/Moteio.app/www/index.html
+2013-07-11 16:30:04.583 Moteio[67500:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:30:04.741 Moteio[67500:c07] Resetting plugins due to page load.
+2013-07-11 16:34:10.867 Moteio[67500:2803] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-07-11 16:34:12.816 Moteio[67500:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/1ED45DF7-ABB3-4DE1-9C0A-D2AD5C35E095/Moteio.app/www/index.html
+2013-07-11 16:34:29.095 Moteio[67500:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 16:40:11.551 Moteio[68744:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:40:11.613 Moteio[68744:c07] Resetting plugins due to page load.
+2013-07-11 16:40:21.200 Moteio[68744:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/1ED45DF7-ABB3-4DE1-9C0A-D2AD5C35E095/Moteio.app/www/index.html
+2013-07-11 16:41:12.224 Moteio[69178:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:41:12.297 Moteio[69178:c07] Resetting plugins due to page load.
+2013-07-11 16:41:50.438 Moteio[69178:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-07-11 16:41:52.667 Moteio[69178:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/1ED45DF7-ABB3-4DE1-9C0A-D2AD5C35E095/Moteio.app/www/index.html
+2013-07-11 16:43:13.527 Moteio[69540:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:43:13.593 Moteio[69540:c07] Resetting plugins due to page load.
+2013-07-11 16:43:13.835 Moteio[69540:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-11 16:43:13.976 Moteio[69540:c07] ready
+2013-07-11 16:43:13.980 Moteio[69540:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/E5DA3C14-C629-481B-96BC-72ECBEC7771C/Moteio.app/www/index.html
+2013-07-11 16:43:29.871 Moteio[69540:c07] login form submit
+2013-07-11 16:43:30.257 Moteio[69540:c07] waiting for sync
+2013-07-11 16:43:30.357 Moteio[69540:c07] connecting
+2013-07-11 16:43:30.530 Moteio[69540:c07] connect
+2013-07-11 16:43:30.710 Moteio[69540:c07] update-config
+2013-07-11 16:43:30.767 Moteio[69540:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 16:43:45.280 Moteio[69540:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 16:43:46.427 Moteio[69540:c07] disconnect
+2013-07-11 16:43:46.431 Moteio[69540:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 16:44:12.871 Moteio[69892:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:44:13.008 Moteio[69892:c07] Resetting plugins due to page load.
+2013-07-11 16:44:18.826 Moteio[69892:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/1CF8C2ED-FE56-4ED7-865D-DE4840497D40/Moteio.app/www/index.html
+2013-07-11 16:44:57.278 Moteio[70244:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:44:57.355 Moteio[70244:c07] Resetting plugins due to page load.
+2013-07-11 16:44:57.601 Moteio[70244:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-11 16:44:57.685 Moteio[70244:c07] ready
+2013-07-11 16:44:57.690 Moteio[70244:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/2A504F75-F5ED-4256-8C92-DD6AEB199DD9/Moteio.app/www/index.html
+2013-07-11 16:45:07.011 Moteio[70244:c07] login form submit
+2013-07-11 16:45:07.369 Moteio[70244:c07] waiting for sync
+2013-07-11 16:45:07.496 Moteio[70244:c07] connecting
+2013-07-11 16:45:07.663 Moteio[70244:c07] connect
+2013-07-11 16:45:07.827 Moteio[70244:c07] update-config
+2013-07-11 16:45:07.902 Moteio[70244:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 16:46:51.589 Moteio[70622:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:46:51.647 Moteio[70622:c07] Resetting plugins due to page load.
+2013-07-11 16:46:51.993 Moteio[70622:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-11 16:46:52.137 Moteio[70622:c07] ready
+2013-07-11 16:46:52.142 Moteio[70622:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/2A504F75-F5ED-4256-8C92-DD6AEB199DD9/Moteio.app/www/index.html
+2013-07-11 16:47:16.726 Moteio[70974:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 16:47:16.830 Moteio[70974:c07] Resetting plugins due to page load.
+2013-07-11 16:47:17.098 Moteio[70974:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-11 16:47:17.193 Moteio[70974:c07] ready
+2013-07-11 16:47:17.216 Moteio[70974:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/80AD48D6-3360-4A29-9EF5-065F5A7EDEA4/Moteio.app/www/index.html
+2013-07-11 16:47:23.398 Moteio[70974:c07] login form submit
+2013-07-11 16:47:23.742 Moteio[70974:c07] waiting for sync
+2013-07-11 16:47:23.867 Moteio[70974:c07] connecting
+2013-07-11 16:47:24.058 Moteio[70974:c07] connect
+2013-07-11 16:47:24.252 Moteio[70974:c07] update-config
+2013-07-11 16:47:24.290 Moteio[70974:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-07-11 17:09:01.759 Moteio[70974:c07] update-config
+2013-07-11 17:11:35.179 Moteio[73839:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-11 17:11:35.271 Moteio[73839:c07] Resetting plugins due to page load.
+2013-07-11 17:11:39.480 Moteio[73839:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/071EBAC1-331F-47D2-B3FC-F898A195E598/Moteio.app/www/index.html
