@@ -30,11 +30,13 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/index.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/main.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/moteio.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/spec.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/font-awesome.min.css \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/jquery.mobile.structure-1.3.1.min.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/moteio-retina.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/moteio.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/themes \
@@ -106,12 +108,9 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_mdpi.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_xhdpi-p.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_xhdpi.png \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery-1.7.1.min.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery.mobile-1.0.1.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery.mobile-1.1.0-rc.1.min.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery-1.8.2.min.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery.mobile-1.3.1.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/retina.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/socket.io.min.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/images \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.min.css \
