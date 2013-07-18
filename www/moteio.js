@@ -14,8 +14,8 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3000';
-  //self.remote_location = 'https://mote.io:443';
+  //self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.set = function(key, data) {
@@ -58,13 +58,14 @@ var App = function () {
       buttons = null;
 
     if(typeof res == "undefined" || !res) {
-      alert('Connected to site but window.moteioConfig is not defined on web page.');
+      navigator.notification.alert('Connected to site but window.moteioConfig is not defined on web page.');
     } else if(typeof res.app_name == "undefined" || !res.app_name) {
-      alert('Please supply an app name in the moteioConfig.')
+      navigator.notification.alert('Please supply an app name in the moteioConfig.')
     }
 
     $('.ui-title').text(res.app_name);
     $('#remote-render').html('');
+
     var id = 0;
 
     for(var key in res.blocks) {
@@ -113,7 +114,7 @@ var App = function () {
               self.channel.emit('input', data, function () {
               });
 
-            })
+            });
             /*
             element.bind('vmouseup', function (e) {
 
@@ -228,14 +229,8 @@ var App = function () {
 
     self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true});
 
-    self.channel.on('update-config', function (data) {
-      console.log('update-config')
-      self.renderRemote(data);
-      self.channel.emit('got-config');
-    });
-
     self.channel.on('connect_failed', function (reason) {
-      alert('Handshake unauthorized.');
+      navigator.notification.alert('Your session has become invalid. Please login again.');
       self.logout();
     });
 
@@ -268,38 +263,48 @@ var App = function () {
     });
 
     self.channel.on('connect', function () {
+
       console.log('connect');
       self.channel.emit('get-config');
-    });
 
-    self.channel.on('notify', function (data) {
+      self.channel.on('update-config', function (data) {
 
-      var now_playing = $('.notify');
-      now_playing.empty();
+        console.log('update-config')
+        self.renderRemote(data);
+        self.channel.emit('got-config');
 
-      if (typeof data.image !== "undefined") {
-        now_playing.append('<img src="' + data.image + '" class="thumb" />');
-      }
-      if (typeof data.line1 !== "undefined") {
-        now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
-      }
-      if (typeof data.line2 !== "undefined") {
-        now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
-      }
+      });
 
-    });
+      self.channel.on('notify', function (data) {
 
-    self.channel.on('update-button', function(data){
+        var now_playing = $('.notify');
+        now_playing.empty();
 
-      if(data.icon) {
-        $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
-      }
+        if (typeof data.image !== "undefined") {
+          now_playing.append('<img src="' + data.image + '" class="thumb" />');
+        }
+        if (typeof data.line1 !== "undefined") {
+          now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
+        }
+        if (typeof data.line2 !== "undefined") {
+          now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
+        }
 
-      if(data.color) {
-        $('#moteio-button-' + data.hash).css({
-          'color': data.color
-        });
-      }
+      });
+
+      self.channel.on('update-button', function(data){
+
+        if(data.icon) {
+          $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
+        }
+
+        if(data.color) {
+          $('#moteio-button-' + data.hash).css({
+            'color': data.color
+          });
+        }
+
+      });
 
     });
 
@@ -320,7 +325,7 @@ var App = function () {
   self.init = function () {
 
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
-      alert('Try connecting to a Wifi network, it makes Mote.io faster!')
+      navigator.notification.alert('Try connecting to a Wifi network, it makes Mote.io faster!')
     }
 
     var data = null;
@@ -340,7 +345,7 @@ var App = function () {
         statusCode: {
           401: function(){
             // Redirec the to the login page.
-            alert('Error authorizing.')
+            navigator.notification.alert('Error authorizing.')
             $.mobile.changePage($('#login'));
           }
         }
@@ -365,18 +370,18 @@ var App = function () {
             self.listen();
 
             console.log('waiting for sync')
-            $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');
+            $('#status-message').html('<p>Syncing...</p><p>Visit <b>http://mote.io/start</b> on your computer for help.</p>');
             $.mobile.changePage($('#status'));
 
           } else {
             $.mobile.changePage($('#login'));
-            alert(response.reason);
+            navigator.notification.alert(response.reason);
           }
 
         },
         error: function(xhr, status, err) {
 
-          alert('There was a problem logging you in or the server timed out. Check your username and password.');
+          navigator.notification.alert('The server is probably down. Please try again later.');
           $.mobile.changePage($('#login'));
         }
       });
@@ -408,6 +413,15 @@ var App = function () {
       $.mobile.useFastClick = true;
     });
 
+    window.plugins.childBrowser.onLocationChange = function (url) {
+      if(url == "https://mote.io/start") {
+        window.plugins.childBrowser.close();
+        navigator.notification.alert('It worked! Sign in and vist https://mote.io/start on your computer.');
+        $.mobile.changePage($('#login'));
+      }
+    };
+
+    navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));
 
   };

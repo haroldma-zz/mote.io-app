@@ -92,6 +92,8 @@
     <gap:splash src="images/splashes/splash_hdpi-p.png" gap:platform="android" gap:density="hdpi" width="480" height="800" />
     <gap:splash src="images/splashes/splash_xhdpi-p.png" gap:platform="android" gap:density="xhdpi" width="1280" height="720" />
 
+    <gap:plugin name="com.phonegap.plugins.childbrowser" />
+
     <access origin="*" />
 
 </widget>

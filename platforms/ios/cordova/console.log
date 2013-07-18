@@ -13,3 +13,93 @@
 2013-07-16 18:35:37.122 Moteio[2771:c07] login form submit
 2013-07-16 18:36:05.478 Moteio[2771:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
 2013-07-16 18:36:08.986 Moteio[2771:c07] login form submit
+2013-07-17 13:33:59.718 Moteio[8235:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:33:59.985 Moteio[8235:c07] Resetting plugins due to page load.
+2013-07-17 13:34:00.064 Moteio[8235:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:34:00.066 Moteio[8235:c07] Resetting plugins due to page load.
+2013-07-17 13:34:24.785 Moteio[8605:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:34:24.867 Moteio[8605:c07] Resetting plugins due to page load.
+2013-07-17 13:34:24.899 Moteio[8605:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:34:24.901 Moteio[8605:c07] Resetting plugins due to page load.
+2013-07-17 13:34:26.553 Moteio[8605:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 13:34:26.702 Moteio[8605:c07] ready
+2013-07-17 13:34:26.705 Moteio[8605:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/main.html
+2013-07-17 13:37:09.263 Moteio[9012:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:37:09.363 Moteio[9012:c07] Resetting plugins due to page load.
+2013-07-17 13:37:09.401 Moteio[9012:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:37:09.405 Moteio[9012:c07] Resetting plugins due to page load.
+2013-07-17 13:37:09.852 Moteio[9012:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 13:37:09.977 Moteio[9012:c07] ready
+2013-07-17 13:37:09.983 Moteio[9012:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/main.html
+2013-07-17 13:38:19.852 Moteio[9394:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:38:19.916 Moteio[9394:c07] Resetting plugins due to page load.
+2013-07-17 13:38:19.952 Moteio[9394:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:38:19.955 Moteio[9394:c07] Resetting plugins due to page load.
+2013-07-17 13:38:20.371 Moteio[9394:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 13:38:20.496 Moteio[9394:c07] ready
+2013-07-17 13:38:20.503 Moteio[9394:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/main.html
+Terminating in response to SpringBoard's termination.
+2013-07-17 13:47:50.549 Moteio[9854:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:47:50.638 Moteio[9854:c07] Resetting plugins due to page load.
+2013-07-17 13:47:50.673 Moteio[9854:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:47:50.681 Moteio[9854:c07] Resetting plugins due to page load.
+2013-07-17 13:47:52.997 Moteio[9854:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 13:47:53.087 Moteio[9854:c07] ready
+2013-07-17 13:47:53.090 Moteio[9854:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/main.html
+2013-07-17 13:48:25.930 Moteio[9854:c07] ERROR: Plugin 'ChildBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-07-17 13:48:25.930 Moteio[9854:c07] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "ChildBrowser47883727",
+  "ChildBrowser",
+  "showWebPage",
+  [
+    "https:\/\/mote.io\/register",
+    {
+      "showLocationBar" : true
+    }
+  ]
+]
+2013-07-17 13:48:27.853 Moteio[9854:c07] ERROR: Plugin 'ChildBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-07-17 13:48:27.854 Moteio[9854:c07] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "ChildBrowser47883728",
+  "ChildBrowser",
+  "showWebPage",
+  [
+    "https:\/\/mote.io\/register",
+    {
+      "showLocationBar" : true
+    }
+  ]
+]
+2013-07-17 13:51:24.744 Moteio[10249:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 13:51:24.872 Moteio[10249:c07] Resetting plugins due to page load.
+2013-07-17 13:51:24.910 Moteio[10249:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/index.html
+2013-07-17 13:51:24.913 Moteio[10249:c07] Resetting plugins due to page load.
+2013-07-17 13:51:25.360 Moteio[10249:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 13:51:25.500 Moteio[10249:c07] ready
+2013-07-17 13:51:25.507 Moteio[10249:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/66C858EC-8F35-43E6-B190-773AE136F07E/Moteio.app/www/main.html
+2013-07-17 13:51:39.018 Moteio[10249:c07] ERROR: Plugin 'ChildBrowser' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2013-07-17 13:51:39.019 Moteio[10249:c07] -[CDVCommandQueue executePending] [Line 116] FAILED pluginJSON = [
+  "ChildBrowser285662946",
+  "ChildBrowser",
+  "showWebPage",
+  [
+    "https:\/\/mote.io\/register",
+    {
+      "showLocationBar" : true
+    }
+  ]
+]
+2013-07-17 14:14:48.713 Moteio[10833:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 14:14:48.930 Moteio[10833:c07] Resetting plugins due to page load.
+2013-07-17 14:14:48.968 Moteio[10833:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/B6B47E2A-FCA3-44BF-8D18-80FE1F0250DB/Moteio.app/www/index.html
+2013-07-17 14:14:48.973 Moteio[10833:c07] Resetting plugins due to page load.
+2013-07-17 14:14:49.560 Moteio[10833:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 14:14:49.710 Moteio[10833:c07] ready
+2013-07-17 14:14:49.717 Moteio[10833:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/B6B47E2A-FCA3-44BF-8D18-80FE1F0250DB/Moteio.app/www/main.html
+2013-07-17 15:14:40.716 Moteio[12148:c07] Multi-tasking -> Device: YES, App: YES
+2013-07-17 15:14:40.825 Moteio[12148:c07] Resetting plugins due to page load.
+2013-07-17 15:14:40.870 Moteio[12148:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-07-17 15:14:40.940 Moteio[12148:c07] Resetting plugins due to page load.
+2013-07-17 15:14:43.364 Moteio[12148:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-07-17 15:14:43.479 Moteio[12148:c07] ready
+2013-07-17 15:14:43.483 Moteio[12148:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html

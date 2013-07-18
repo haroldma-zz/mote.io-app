@@ -14,8 +14,8 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3000';
-  //self.remote_location = 'https://mote.io:443';
+  //self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.set = function(key, data) {
@@ -331,6 +331,9 @@ var App = function () {
 
       console.log('login form submit')
 
+      $('#status-message').html('<p>Logging In...</p>');
+      $.mobile.changePage($('#status'));
+
       var data = $(this).serializeArray();
 
       $.ajaxSetup({
@@ -362,7 +365,7 @@ var App = function () {
             self.listen();
 
             console.log('waiting for sync')
-            $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');
+            $('#status-message').html('<p>Syncing...</p><p>Visit <b>http://mote.io/start</b> on your computer for help.</p>');
             $.mobile.changePage($('#status'));
 
           } else {
@@ -404,6 +407,12 @@ var App = function () {
       $.mobile.defaultDialogTransition = 'none';
       $.mobile.useFastClick = true;
     });
+
+    window.plugins.childBrowser.onLocationChange = function (url) {
+      if(url == "https://mote.io/start") {
+        window.plugins.childBrowser.close();
+      }
+    };
 
     $.mobile.changePage($('#login'));
 

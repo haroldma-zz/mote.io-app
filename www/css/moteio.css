@@ -104,6 +104,9 @@ html, body {
   white-space: nowrap;
   height: 25px;
 }
+.align-center {
+  text-align: center;
+}
 .share {
   height: 50px;
 }

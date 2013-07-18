@@ -19,6 +19,7 @@
 
 	<script type="text/javascript" charset="utf-8" src="https://mote.io/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="childbrowser.js"></script>
 	<script type="text/javascript" charset="utf-8" src="moteio.js"></script>
 	<!-- http://debug.phonegap.com/client/#moteio -->
 
@@ -80,8 +81,8 @@
 
 			</form>
 
-			<p data-theme="c">
-				<a href="#" onclick="window.open('https://mote.io/register', '_blank', 'location=yes');">Sign up for an account.</a>
+			<p data-theme="c" class="align-center">
+				<a href="#" onclick="window.plugins.childBrowser.showWebPage('https://mote.io/register');">Sign up for an account.</a>
 			</p>
 
 		</div>
@@ -108,7 +109,7 @@
 		<div data-role="content">
 			<h2>Sign up for a mote.io account</h2>
 			<p>Visit this url using Google Chrome to get started with mote.io!</p>
-			<p><strong>http://mote.io/start</strong></p>
+			<p><strong>https://mote.io/start</strong></p>
 		</div>
 
 	</div>
