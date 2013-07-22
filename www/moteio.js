@@ -205,6 +205,7 @@ var App = function () {
   self.listen = function (username) {
 
     var pusher = new Pusher('9c3e18d7beee023a1f8c', {
+      encrypted: true,
       authTransport: 'jsonp',
       authEndpoint: self.remote_location + '/pusher/auth'
     });
@@ -217,6 +218,30 @@ var App = function () {
     self.channel_name = 'private-' + username;
     self.channel = pusher.subscribe(self.channel_name);
 
+    pusher.connection.bind('connecting', function() {
+      console.log('connecting');
+      $('#status-message').html('<p>Connecting...</p>');
+      $.mobile.changePage($('#status'));
+    });
+
+    pusher.connection.bind('failed', function() {
+      console.log('connecting');
+      $('#status-message').html('<p>Pusher is not supported by your platform!</p>');
+      $.mobile.changePage($('#status'));
+    });
+
+    pusher.connection.bind('disconnected', function() {
+      console.log('disconnected');
+      $('#status-message').html('<p>Disconnected...</p>');
+      $.mobile.changePage($('#status'));
+    });
+
+    pusher.connection.bind('connecting_in', function(delay) {
+      console.log('disconnected');
+      $('#status-message').html('<p>Reconnecting in ' + delay + ' seconds...</p>');
+      $.mobile.changePage($('#status'));
+    });
+
     pusher.connection.bind('connected', function() {
 
       self.channel.bind('pusher:subscription_succeeded', function() {
@@ -228,21 +253,15 @@ var App = function () {
         self.logout();
       });
 
-      self.channel.bind('client-disconnect', function() {
-        console.log('disconnect');
-        // $.mobile.changePage($('#login'));
-        // show a status indication
-      });
-
       self.channel.bind('client-connect_failed', function () {
         console.log('connect_failed');
         $.mobile.changePage($('#login'));
       });
 
-      self.channel.bind('client-connecting', function () {
-        console.log('connecting')
-        //$('#status-message').html('<p>Connecting...</p>');
-        //$.mobile.changePage($('#status'));
+      self.channel.bind('unavailable', function () {
+        console.log('unavailable');
+        $.mobile.changePage($('#login'));
+        navigator.notification.alert('No internet connection available!');
       });
 
       self.channel.bind('client-reconnecting', function () {
@@ -269,7 +288,7 @@ var App = function () {
         var now_playing = $('.notify');
         now_playing.empty();
 
-        if (typeof data.image !== "undefined") {
+        if (typeof data.image !== "undefined" && data.image) {
           now_playing.append('<img src="' + data.image + '" class="thumb" />');
         }
         if (typeof data.line1 !== "undefined") {
