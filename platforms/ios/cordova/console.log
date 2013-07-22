@@ -103,3 +103,4 @@ Terminating in response to SpringBoard's termination.
 2013-07-17 15:14:43.364 Moteio[12148:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
 2013-07-17 15:14:43.479 Moteio[12148:c07] ready
 2013-07-17 15:14:43.483 Moteio[12148:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+Terminating in response to SpringBoard's termination.

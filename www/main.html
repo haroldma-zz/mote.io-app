@@ -15,11 +15,12 @@
 		    $.mobile.ignoreContentEnabled = true;
 		});
 	</script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="js/jquery.mobile-1.3.1.js"></script>
 
-	<script type="text/javascript" charset="utf-8" src="https://mote.io/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript" src="childbrowser.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="js/pusher.js"></script>
 	<script type="text/javascript" charset="utf-8" src="moteio.js"></script>
 	<!-- http://debug.phonegap.com/client/#moteio -->
 
@@ -146,6 +147,27 @@
 		</div>
 
 	</div>
+
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+	    // init the FB JS SDK
+	    FB.init({
+	      appId      : '163150470537618'                                // Look for social plugins on the page
+	    });
+
+	    // Additional initialization code such as adding Event Listeners goes here
+	  };
+
+	  // Load the SDK asynchronously
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/all.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
 
 </body>
 </html>

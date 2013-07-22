@@ -8,14 +8,20 @@ var io = io || null,
   device = device,
   window = window || null;
 
+Pusher.log = function(message) {
+  if (window.console && window.console.log) {
+    window.console.log(message);
+  }
+};
+
 var App = function () {
 
   "use strict";
 
   var self = this;
 
-  //self.remote_location = 'https://localhost:3000';
-  self.remote_location = 'https://mote.io:443';
+  self.remote_location = 'https://localhost:3000';
+  //self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.set = function(key, data) {
@@ -111,26 +117,13 @@ var App = function () {
 
               data.press = true;
 
-              self.channel.emit('input', data, function () {
-              });
+              self.channel.trigger('client-input', data);
 
             });
-            /*
-            element.bind('vmouseup', function (e) {
-
-              navigator.notification.vibrate(250);
-              e.stopPropagation();
-
-              data.press = false;
-
-              self.channel.emit('input', data, function () {
-              });
-
-            });
-            */
 
             container.append(element);
             i++;
+
         });
 
         $('#remote-render').append($('<div class="block"></div>').append(container));
@@ -165,15 +158,7 @@ var App = function () {
             uuid: device.uuid
           }
 
-          self.channel.emit('select', data, function () {
-
-            navigator.notification.vibrate(100);
-
-            setTimeout(function () {
-              navigator.notification.vibrate(100);
-            }, 150);
-
-          });
+          self.channel.trigger('client-select', data);
 
         });
 
@@ -197,15 +182,7 @@ var App = function () {
 
           data.query =  $("#remote-search-form").val()
 
-          self.channel.emit('search', data, function () {
-
-            navigator.notification.vibrate(100);
-
-            setTimeout(function () {
-              navigator.notification.vibrate(100);
-            }, 150);
-
-          });
+          self.channel.trigger('client-search', data);
 
           return false;
 
@@ -225,57 +202,69 @@ var App = function () {
 
   };
 
-  self.listen = function () {
+  self.listen = function (username) {
 
-    self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true});
-
-    self.channel.on('connect_failed', function (reason) {
-      navigator.notification.alert('Your session has become invalid. Please login again.');
-      self.logout();
+    var pusher = new Pusher('9c3e18d7beee023a1f8c', {
+      authTransport: 'jsonp',
+      authEndpoint: self.remote_location + '/pusher/auth'
     });
 
-    self.channel.on('disconnect', function() {
-      console.log('disconnect');
-      // $.mobile.changePage($('#login'));
-      // show a status indication
+    pusher.connection.bind('state_change', function(states) {
+      // states = {previous: 'oldState', current: 'newState'}
+     console.log(states.current);
     });
 
-    self.channel.on('connect_failed', function () {
-      console.log('connect_failed');
-      $.mobile.changePage($('#login'));
-    });
+    self.channel_name = 'private-' + username;
+    self.channel = pusher.subscribe(self.channel_name);
 
-    self.channel.on('connecting', function () {
-      console.log('connecting')
-      //$('#status-message').html('<p>Connecting...</p>');
-      //$.mobile.changePage($('#status'));
-    });
+    pusher.connection.bind('connected', function() {
 
-    self.channel.on('reconnecting', function () {
-      console.log('reconnecting');
-      $('#status-message').html('<p>Reconnecting...</p>');
-      $.mobile.changePage($('#status'));
-    });
+      self.channel.bind('pusher:subscription_succeeded', function() {
+         self.channel.trigger('client-get-config', {});
+      });
 
-    self.channel.on('reconnect', function () {
-      console.log('reconnect');
-      self.channel.emit('get-config');
-    });
+      self.channel.bind('client-connect_failed', function (reason) {
+        navigator.notification.alert('Your session has become invalid. Please login again.');
+        self.logout();
+      });
 
-    self.channel.on('connect', function () {
+      self.channel.bind('client-disconnect', function() {
+        console.log('disconnect');
+        // $.mobile.changePage($('#login'));
+        // show a status indication
+      });
 
-      console.log('connect');
-      self.channel.emit('get-config');
+      self.channel.bind('client-connect_failed', function () {
+        console.log('connect_failed');
+        $.mobile.changePage($('#login'));
+      });
 
-      self.channel.on('update-config', function (data) {
+      self.channel.bind('client-connecting', function () {
+        console.log('connecting')
+        //$('#status-message').html('<p>Connecting...</p>');
+        //$.mobile.changePage($('#status'));
+      });
+
+      self.channel.bind('client-reconnecting', function () {
+        console.log('reconnecting');
+        $('#status-message').html('<p>Reconnecting...</p>');
+        $.mobile.changePage($('#status'));
+      });
+
+      self.channel.bind('client-update-config', function (data) {
 
         console.log('update-config')
         self.renderRemote(data);
-        self.channel.emit('got-config');
+        self.channel.trigger('client-got-config', {});
 
       });
 
-      self.channel.on('notify', function (data) {
+      self.channel.bind('client-reconnect', function () {
+        console.log('reconnect');
+        self.channel.trigger('client-get-config', {});
+      });
+
+      self.channel.bind('client-notify', function (data) {
 
         var now_playing = $('.notify');
         now_playing.empty();
@@ -292,7 +281,7 @@ var App = function () {
 
       });
 
-      self.channel.on('update-button', function(data){
+      self.channel.bind('client-update-button', function(data){
 
         if(data.icon) {
           $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
@@ -309,7 +298,7 @@ var App = function () {
     });
 
     $('.go-home').click(function(){
-      self.channel.emit('go-home');
+      self.channel.trigger('client-go-home', {});
     });
 
   };
@@ -367,7 +356,7 @@ var App = function () {
               self.set('login', null)
             }
 
-            self.listen();
+            self.listen(response.user._id);
 
             console.log('waiting for sync')
             $('#status-message').html('<p>Syncing...</p><p>Visit <b>http://mote.io/start</b> on your computer for help.</p>');
