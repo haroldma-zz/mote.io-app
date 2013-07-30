@@ -15,6 +15,8 @@ var App = function () {
   var self = this;
 
   self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'https://localhost:3000';
+
   //self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
