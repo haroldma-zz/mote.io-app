@@ -331,6 +331,9 @@ var App = function () {
 
       console.log('login form submit')
 
+      $('#status-message').html('<p>Logging In...</p>');
+      $.mobile.changePage($('#status'));
+
       var data = $(this).serializeArray();
 
       $.ajaxSetup({
