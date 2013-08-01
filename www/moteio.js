@@ -382,6 +382,7 @@ var App = function () {
 
             if(data[2].value == "1") {
               self.set('login', data);
+              $('#password').val('');
             } else {
               self.set('login', null)
             }
@@ -433,6 +434,7 @@ var App = function () {
       $.mobile.useFastClick = true;
     });
 
+    navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));
 
   };
