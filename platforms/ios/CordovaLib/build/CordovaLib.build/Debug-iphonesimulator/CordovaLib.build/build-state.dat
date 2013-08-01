@@ -2,52 +2,52 @@ TCordovaLib
 v5
 r1
 cCheck dependencies
-cCpHeader Classes/NSDictionary+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
 cCpHeader Classes/CDVInvokedUrlCommand.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+cCpHeader Classes/NSDictionary+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
 cCpHeader Classes/NSData+Base64.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSData+Base64.h
 cCpHeader Classes/CDVPluginResult.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVPluginResult.h
 cCpHeader Classes/CDVPlugin.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVPlugin.h
 cCpHeader Classes/CDVDebug.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVDebug.h
 cCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
 cCpHeader Classes/CDVWhitelist.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWhitelist.h
-cCpHeader Classes/CDVURLProtocol.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVURLProtocol.h
 cCpHeader Classes/CDVViewController.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVViewController.h
+cCpHeader Classes/CDVURLProtocol.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVURLProtocol.h
 cCpHeader Classes/CDVCommandDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
 cCpHeader Classes/CDV.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDV.h
 cCpHeader Classes/CDVAvailability.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVAvailability.h
 cCpHeader Classes/CDVLocalStorage.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVLocalStorage.h
 cCpHeader Classes/UIDevice+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
 cCpHeader Classes/NSArray+Comparisons.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
-cCpHeader Classes/CDVEcho.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVEcho.h
-cCpHeader Classes/CDVCommandQueue.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandQueue.h
 cCpHeader Classes/CDVCommandDelegateImpl.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+cCpHeader Classes/CDVCommandQueue.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandQueue.h
+cCpHeader Classes/CDVEcho.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVEcho.h
 cCpHeader Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h
-cCpHeader Classes/CDVConfigParser.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVConfigParser.h
 cCpHeader Classes/CDVJSON.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVJSON.h
 cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+cCpHeader Classes/CDVConfigParser.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVConfigParser.h
 cCpHeader Classes/CDVWebViewDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
-cCpHeader Classes/CDVUserAgentUtil.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
 cCpHeader Classes/CDVTimer.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVTimer.h
+cCpHeader Classes/CDVUserAgentUtil.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
 cProcessPCH /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVEcho.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVEcho.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386
@@ -58,13 +58,13 @@ t1371749959
 s272
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDV.h
-c0000000051FAC58D0000000000000516
-t1375389069
+c0000000051FAD96F0000000000000516
+t1375394159
 s1302
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-c0000000051FAC58D0000000000000C65
-t1375389069
+c0000000051FAD96F0000000000000C65
+t1375394159
 s3173
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
@@ -88,8 +88,8 @@ t1375389069
 s1281
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-c0000000051FAC58D000000000000152E
-t1375389069
+c0000000051FAD96F000000000000152E
+t1375394159
 s5422
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
@@ -98,8 +98,8 @@ t1375389069
 s1227
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-c0000000051FAC58D0000000000000E0D
-t1375389069
+c0000000051FAD96F0000000000000E0D
+t1375394159
 s3597
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVDebug.h
@@ -118,13 +118,13 @@ t1375389069
 s2266
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-c0000000051FAC58D00000000000007E6
-t1375389069
+c0000000051FAD96F00000000000007E6
+t1375394159
 s2022
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-c0000000051FAC58D0000000000000DDE
-t1375389069
+c0000000051FAD96F0000000000000DDE
+t1375394159
 s3550
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVJSON.h
@@ -173,13 +173,13 @@ t1375389069
 s1032
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.h
-c0000000051FAC58D00000000000003E6
-t1375389069
+c0000000051FAD96F00000000000003E6
+t1375394159
 s998
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m
-c0000000051FAC58D00000000000006B6
-t1375389069
+c0000000051FAD96F00000000000006B6
+t1375394159
 s1718
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVTimer.h
@@ -198,8 +198,8 @@ t1375389069
 s1052
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-c0000000051FAC58D0000000000002514
-t1375389069
+c0000000051FAD96F0000000000002514
+t1375394159
 s9492
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
@@ -213,13 +213,13 @@ t1375389069
 s4770
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.h
-c0000000051FAC58D0000000000000ACC
-t1375389069
+c0000000051FAD96F0000000000000ACC
+t1375394159
 s2764
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.m
-c0000000051FAC58D0000000000008568
-t1375389069
+c0000000051FAD96F0000000000008568
+t1375394159
 s34152
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
@@ -228,8 +228,8 @@ t1375389069
 s1442
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-c0000000051FAC58D00000000000037C6
-t1375389069
+c0000000051FAD96F00000000000037C6
+t1375394159
 s14278
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
@@ -298,23 +298,23 @@ t1375389069
 s838
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
-t1375389076
+t1375394159
 s88796
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
-t1375389076
+t1375394159
 s85912
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
-t1375389076
+t1375394159
 s26924
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVEcho.o
-t1375389076
+t1375394159
 s75168
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
-t1375389075
+t1375394159
 s18616
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
@@ -322,11 +322,11 @@ t1375389076
 s10700
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
-t1375389076
+t1375394159
 s135900
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
-t1375389076
+t1375394172
 s85804
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
@@ -334,15 +334,15 @@ t1375389075
 s37600
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
-t1375389077
+t1375394172
 s9288
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
-t1375389077
+t1375394159
 s22976
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
-t1375389076
+t1375394159
 s97424
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
@@ -350,11 +350,11 @@ t1375389077
 s78988
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
-t1375389077
+t1375394159
 s194716
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
-t1375389077
+t1375394159
 s97012
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
@@ -362,8 +362,8 @@ t1375389075
 s30920
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList
-c0000000051FAC5930000000000000D90
-t1375389075
+c0000000051FAD96F0000000000000D90
+t1375394159
 s3472
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
@@ -387,11 +387,11 @@ t1375389076
 s9572
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDV.h
-t1375389075
+t1375394159
 s1302
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVAvailability.h
-t1375389075
+t1375394159
 s3173
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
@@ -419,7 +419,7 @@ t1375389075
 s834
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
-t1375389075
+t1375394159
 s2022
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVJSON.h
@@ -443,7 +443,7 @@ t1375389075
 s1032
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h
-t1375389075
+t1375394172
 s998
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVTimer.h
@@ -459,7 +459,7 @@ t1375389075
 s1057
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVViewController.h
-t1375389075
+t1375394159
 s2764
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
@@ -491,7 +491,7 @@ t1375389075
 s1142
 
 N/Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a
-t1375389077
+t1375394172
 s1157128
 
 N/var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch.pth
@@ -500,7 +500,7 @@ s2841836
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciescf81c90c06abb741^ee7b000d06abb741^---0#1#0#--18"Check dependencies36"B1E941D5-45C1-4A79-9730-BE23064D2FEE-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies5bef8fc520abb741^4d10adc520abb741^---0#1#0#--18"Check dependencies36"28D7CD6C-17ED-4946-8891-DBCB650A26E5-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s397081876.739682
@@ -594,8 +594,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m7ac60214fdaab741^e15f9814fdaab741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m0000000000000000^4296"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o36"F74CB046-F04A-4E24-A01F-7404892ED825-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s397081875.906928
-e397081876.448042
+s397086972.238657
+e397086972.621125
 r1
 xCompileC
 xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
@@ -604,7 +604,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m008fe813fdaab741^70b57214fdaab741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m0000000000000000^4260"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o36"AA28BBBF-A04C-4FDB-AB76-0D8954BC83A3-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m984c3dfc10abb741^a8019ffc10abb741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m0000000000000000^4260"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o36"2EC45E8A-BBDA-4B05-B9EA-9EECA059549C-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s397081875.885649
@@ -620,8 +620,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m87f9e213fdaab741^f3aa0214fdaab741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m0000000000000000^4296"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o36"7722F2AA-3923-450F-88B1-4376F4C2139B-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s397081877.067114
-e397081877.147811
+s397086972.246016
+e397086972.497033
 r1
 xCompileC
 xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
@@ -630,7 +630,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m6d751115fdaab741^b8e72515fdaab741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m0000000000000000^4260"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o36"FE578117-AB3B-44EF-A282-A1B824D184D0-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m73473ffc10abb741^87338ffc10abb741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m0000000000000000^4260"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/Jennings/Development/mote.io-app/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/Jennings/Development/mote.io-app/platforms/ios/build -DDEBUG -include /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.d --serialize-diagnostics /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.dia -c /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m -o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o36"FCE9DFAF-3A39-46E0-B69F-6652F4239DC0-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s397081876.991114
@@ -902,13 +902,13 @@ x/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDV
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Copy /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.hbaba3b13fdaab741^9d4b3d13fdaab741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h000000000080d041^1216"CpHeader Classes/CDVScreenOrientationDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova36"B2411747-C8FF-4A0B-A3E8-EC5C2D33729C-
 
 CCpHeader Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h
-s397081875.232597
-e397081875.239211
+s397086972.220460
+e397086972.223490
 r1
 xCpHeader
 xClasses/CDVShared.h
 x/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h5bb53b13fdaab741^8a3c3d13fdaab741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h000000000080d041^1159"CpHeader Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova36"8EE7B91B-0938-43A8-BB96-23704FEA3011-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h94a338fc10abb741^3f3639fc10abb741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h0000000000000000^1159"CpHeader Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova36"B31247A2-A089-404A-B095-2D74466A3ED5-
 
 CCpHeader Classes/CDVTimer.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVTimer.h
 s397081875.243716
@@ -1010,14 +1010,14 @@ x/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UID
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UIDevice+Extensions.h9b8e3813fdaab741^3dba3913fdaab741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UIDevice+Extensions.h000000000080d041^1189"CpHeader Classes/UIDevice+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UIDevice+Extensions.h    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova36"DB3FE200-D2AA-4486-A1EA-B0542C0A4140-
 
 CLibtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386
-s397081877.320438
-e397081877.341269
+s397086972.627938
+e397086972.650296
 r1
 xLibtool
 x/Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Libtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386b5355215fdaab741^39605715fdaab741^---0#0#0#--1471"Libtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/Jennings/Development/mote.io-app/platforms/ios/build -filelist /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a36"D23B8EB3-5CAA-41F5-8EC8-0D0C6FC068C2-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Libtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386d6e5a0fc10abb741^cc79a6fc10abb741^---0#0#0#--1471"Libtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386    cd /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/share/npm/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/gems/ruby-1.9.3-p385@global/bin:/Users/Jennings/.rvm/rubies/ruby-1.9.3-p385/bin:/Users/Jennings/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/Jennings/Development/mote.io-app/platforms/ios/build -filelist /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a36"59902C06-78C7-4F07-ADB8-936A78963D82-
 
 CProcessPCH /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s397081875.256692

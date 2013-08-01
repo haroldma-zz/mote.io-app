@@ -97,7 +97,7 @@ var App = function () {
         wrapper = $('<div class="block"></div>');
         var notify = $('<div class="notify"></div>');
 
-        $('#remote-render').append(wrapper.append(notify).append('<div class="block share" style="display: none;"><div class="buttons"><span class="icon-facebook facebook moteio-button"></span><span class="moteio-button icon-twitter twitter"></span></div></div>'));
+        $('#remote-render').append(wrapper.append(notify).append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>'));
 
       }
 
@@ -116,7 +116,7 @@ var App = function () {
 
           var data = self.populateHash(params.hash, data);
 
-          element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button icon-' + button.icon + '" /></span>')
+          element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
             .bind('vmousedown', function (e) {
 
               e.stopPropagation();
@@ -294,7 +294,7 @@ var App = function () {
         if(message.type == 'update-button') {
 
           if(data.icon) {
-            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
+            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
           }
 
           if(data.color) {
@@ -348,8 +348,6 @@ var App = function () {
     var data = null;
 
     $("#login-form").submit(function (e) {
-
-      alert('hit')
 
       e.preventDefault();
 
@@ -411,10 +409,19 @@ var App = function () {
 
     });
 
-    $('#logout').click(function(){
-      self.shush();
+    $('.logout').click(function(){
       self.logout();
       $.mobile.changePage($('#login'));
+    });
+
+    $('.sign-up').click(function(){
+      var ref = window.open('https://mote.io/register', '_blank');
+      ref.addEventListener('loadstart', function(event) {
+        if(event.url == "https://mote.io/start") {
+          ref.close();
+          alert('All signed up! Now log in.');
+        }
+      });
     });
 
     if(self.get('login')) {

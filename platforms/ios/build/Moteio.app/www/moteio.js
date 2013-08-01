@@ -382,6 +382,7 @@ var App = function () {
 
             if(data[2].value == "1") {
               self.set('login', data);
+              $('#password').val('');
             } else {
               self.set('login', null)
             }
@@ -416,6 +417,16 @@ var App = function () {
       $.mobile.changePage($('#login'));
     });
 
+    $('.sign-up').click(function(){
+      var ref = window.open('https://mote.io/register', '_blank');
+      ref.addEventListener('loadstart', function(event) {
+        if(event.url == "https://mote.io/start") {
+          ref.close();
+          alert('All signed up! Now log in.');
+        }
+      });
+    });
+
     if(self.get('login')) {
 
       var data = self.get('login')
@@ -433,6 +444,7 @@ var App = function () {
       $.mobile.useFastClick = true;
     });
 
+    navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));
 
   };

@@ -5,8 +5,8 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -45px;
-  margin-left: -45px;
+  margin-top: -60px;
+  margin-left: -60px;
 }
 #login a {
   text-decoration: none;
@@ -21,6 +21,7 @@ html, body {
   background-image: url('../images/icons/144.png');
   width: 144px;
   height: 144px;
+  margin-bottom: 45px;
 }
 #login-button {
   margin-top: 40px;
@@ -36,9 +37,6 @@ html, body {
   padding-left: 10%;
   padding-right: 10%;
   color: #ccc;
-}
-.loading .ui-content a {
-  color: #fff;
 }
 .block {
   width: 280px;
@@ -117,4 +115,9 @@ html, body {
 }
 #remote .ui-content {
   padding-top: 0px;
+}
+#login-form {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 0px;
 }
