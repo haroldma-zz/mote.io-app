@@ -10,5 +10,4 @@ dependencies: \
   /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h \
   /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.h \
   /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.h \
-  /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
-  /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVFile.h
+  /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h

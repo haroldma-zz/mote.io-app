@@ -7,4 +7,6 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$string.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$xml.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R.class \
-/Users/Jennings/Development/mote.io-app/platforms/android/bin/dexedLibs/cordova-2.9.0-044fbcb88af526240d14a62d8053b59c.jar \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager$1.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/dexedLibs/cordova-3.0.0-ac99e90a8c26389f5c6cb0f4975f927e.jar \

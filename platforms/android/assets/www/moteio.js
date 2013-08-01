@@ -14,9 +14,24 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3002';
-  //self.remote_location = 'https://mote.io:443';
+  // self.remote_location = 'https://localhost:3000';
+  // self.remote_location = 'http://localhost:3002';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
+
+  self.pubnub = null;
+  self.channel_name = null;
+
+  self.strencode = function( data ) {
+    return data;
+    //return unescape( encodeURIComponent( data  ) );
+  }
+
+  self.strdecode = function( data ) {
+    console.log(data)
+    return data;
+    //return JSON.parse( decodeURIComponent( data ) );
+  }
 
   self.set = function(key, data) {
     // Put the object into storage
@@ -96,8 +111,7 @@ var App = function () {
           var data = {
             block_id: params._id,
             _id: i,
-            hash: self.populateHash(button.hash, params._id + '_' + i),
-            uuid: device.uuid
+            hash: self.populateHash(button.hash, params._id + '_' + i)
           }
 
           var data = self.populateHash(params.hash, data);
@@ -105,28 +119,19 @@ var App = function () {
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button icon-' + button.icon + '" /></span>')
             .bind('vmousedown', function (e) {
 
-              navigator.notification.vibrate(250);
               e.stopPropagation();
 
               data.press = true;
 
-              self.channel.emit('input', data, function () {
-              });
-
-            })
-            /*
-            element.bind('vmouseup', function (e) {
-
-              navigator.notification.vibrate(250);
-              e.stopPropagation();
-
-              data.press = false;
-
-              self.channel.emit('input', data, function () {
+              self.pubnub.publish({
+                channel : self.channel_name,
+                message : {
+                  type: 'input',
+                  data: data
+                }
               });
 
             });
-            */
 
             container.append(element);
             i++;
@@ -160,18 +165,15 @@ var App = function () {
           var data = {
             block_id: option_data.paramid,
             _id: $(this).val(),
-            hash: option_data.paramid + '_' + $(this).val(),
-            uuid: device.uuid
+            hash: option_data.paramid + '_' + $(this).val()
           }
 
-          self.channel.emit('select', data, function () {
-
-            navigator.notification.vibrate(100);
-
-            setTimeout(function () {
-              navigator.notification.vibrate(100);
-            }, 150);
-
+          self.pubnub.publish({
+            channel : self.channel_name,
+            message : {
+              type: 'select',
+              data: data
+            }
           });
 
         });
@@ -188,25 +190,20 @@ var App = function () {
 
         var data = {
           block_id: params._id,
-          hash: params._id,
-          uuid: device.uuid
+          hash: params._id
         }
 
         search_html.bind('submit', function(e) {
 
-          data.query =  $("#remote-search-form").val()
+          data.query =  $("#remote-search-form").val();
 
-          self.channel.emit('search', data, function () {
-
-            navigator.notification.vibrate(100);
-
-            setTimeout(function () {
-              navigator.notification.vibrate(100);
-            }, 150);
-
+          self.pubnub.publish({
+            channel : self.channel_name,
+            message : {
+              type: 'search',
+              data: data
+            }
           });
-
-          return false;
 
         });
 
@@ -224,87 +221,103 @@ var App = function () {
 
   };
 
-  self.listen = function () {
+  self.listen = function (channel_name) {
 
-    self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true});
+    self.channel_name = channel_name;
 
-    self.channel.on('update-config', function (data) {
-      console.log('update-config')
-      self.renderRemote(data);
-      self.channel.emit('got-config');
-    });
+    self.pubnub.subscribe({
+      channel: self.channel_name,
+      connect: function() {
 
-    self.channel.on('connect_failed', function (reason) {
-      alert('Handshake unauthorized.');
-      self.logout();
-    });
-
-    self.channel.on('disconnect', function() {
-      console.log('disconnect');
-      // $.mobile.changePage($('#login'));
-      // show a status indication
-    });
-
-    self.channel.on('connect_failed', function () {
-      console.log('connect_failed');
-      $.mobile.changePage($('#login'));
-    });
-
-    self.channel.on('connecting', function () {
-      console.log('connecting')
-      //$('#status-message').html('<p>Connecting...</p>');
-      //$.mobile.changePage($('#status'));
-    });
-
-    self.channel.on('reconnecting', function () {
-      console.log('reconnecting');
-      $('#status-message').html('<p>Reconnecting...</p>');
-      $.mobile.changePage($('#status'));
-    });
-
-    self.channel.on('reconnect', function () {
-      console.log('reconnect');
-      self.channel.emit('get-config');
-    });
-
-    self.channel.on('connect', function () {
-      console.log('connect');
-      self.channel.emit('get-config');
-    });
-
-    self.channel.on('notify', function (data) {
-
-      var now_playing = $('.notify');
-      now_playing.empty();
-
-      if (typeof data.image !== "undefined") {
-        now_playing.append('<img src="' + data.image + '" class="thumb" />');
-      }
-      if (typeof data.line1 !== "undefined") {
-        now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
-      }
-      if (typeof data.line2 !== "undefined") {
-        now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
-      }
-
-    });
-
-    self.channel.on('update-button', function(data){
-
-      if(data.icon) {
-        $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
-      }
-
-      if(data.color) {
-        $('#moteio-button-' + data.hash).css({
-          'color': data.color
+        self.pubnub.publish({
+          channel : self.channel_name,
+          message : {
+            type: 'get-config'
+          }
         });
+
+      },
+      disconnect: function() {
+
+        self.logout();
+
+      },
+      reconnect: function() {
+
+        self.pubnub.publish({
+          channel : self.channel_name,
+          message : {
+            type: 'get-config'
+          }
+        });
+
+      },
+      message: function( message) {
+
+        console.log(message);
+        var data = null;
+        if(message.data !== "undefined") {
+          data = message.data;
+        }
+
+        if(message.type == 'update-config') {
+
+          console.log('update-config')
+          self.renderRemote(data);
+
+          self.pubnub.publish({
+            channel : self.channel_name,
+            message : {
+              type: 'got-config'
+            }
+          });
+
+        }
+
+        if(message.type == 'notify') {
+
+          var now_playing = $('.notify');
+          now_playing.empty();
+
+          if (typeof data.image !== "undefined") {
+            now_playing.append('<img src="' + data.image + '" class="thumb" />');
+          }
+          if (typeof data.line1 !== "undefined") {
+            now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
+          }
+          if (typeof data.line2 !== "undefined") {
+            now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
+          }
+
+        }
+
+        if(message.type == 'update-button') {
+
+          if(data.icon) {
+            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
+          }
+
+          if(data.color) {
+            $('#moteio-button-' + data.hash).css({
+              'color': data.color
+            });
+          }
+
+        }
+
       }
 
     });
 
     $('.go-home').click(function(){
-      self.channel.emit('go-home');
+
+      self.pubnub.publish({
+        channel : self.channel_name,
+        message : {
+          type: 'go-home'
+        }
+      });
+
     });
 
   };
@@ -319,6 +332,15 @@ var App = function () {
 
   self.init = function () {
 
+    console.log('console')
+
+    self.pubnub = PUBNUB.init({
+      publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
+      subscribe_key: 'sub-cfb3b894-0a2a-11e0-a510-1d92d9e0ffba',
+      origin        : 'pubsub.pubnub.com',
+      ssl           : true
+    });
+
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
       alert('Try connecting to a Wifi network, it makes Mote.io faster!')
     }
@@ -326,6 +348,8 @@ var App = function () {
     var data = null;
 
     $("#login-form").submit(function (e) {
+
+      alert('hit')
 
       e.preventDefault();
 
@@ -362,7 +386,7 @@ var App = function () {
               self.set('login', null)
             }
 
-            self.listen();
+            self.listen(response.user.username);
 
             console.log('waiting for sync')
             $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');
@@ -370,6 +394,7 @@ var App = function () {
 
           } else {
             $.mobile.changePage($('#login'));
+            console.log(response)
             alert(response.reason);
           }
 
@@ -395,9 +420,9 @@ var App = function () {
 
       var data = self.get('login')
 
-      $('#username').val(data[0].value)
-      $('#password').val(data[1].value)
-      $('#remember-me').val('1')
+      $('#username').val(data[0].value);
+      $('#password').val(data[1].value);
+      $('#remember-me').val('1').slider('refresh');
       // $("#login-form").submit();
 
     }

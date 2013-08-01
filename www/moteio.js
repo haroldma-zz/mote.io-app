@@ -14,9 +14,9 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3000';
+  // self.remote_location = 'https://localhost:3000';
   // self.remote_location = 'http://localhost:3002';
-  // self.remote_location = 'https://mote.io:443';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
@@ -111,8 +111,7 @@ var App = function () {
           var data = {
             block_id: params._id,
             _id: i,
-            hash: self.populateHash(button.hash, params._id + '_' + i),
-            uuid: device.uuid
+            hash: self.populateHash(button.hash, params._id + '_' + i)
           }
 
           var data = self.populateHash(params.hash, data);
@@ -120,7 +119,6 @@ var App = function () {
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button icon-' + button.icon + '" /></span>')
             .bind('vmousedown', function (e) {
 
-              navigator.notification.vibrate(250);
               e.stopPropagation();
 
               data.press = true;
@@ -167,8 +165,7 @@ var App = function () {
           var data = {
             block_id: option_data.paramid,
             _id: $(this).val(),
-            hash: option_data.paramid + '_' + $(this).val(),
-            uuid: device.uuid
+            hash: option_data.paramid + '_' + $(this).val()
           }
 
           self.pubnub.publish({
@@ -193,8 +190,7 @@ var App = function () {
 
         var data = {
           block_id: params._id,
-          hash: params._id,
-          uuid: device.uuid
+          hash: params._id
         }
 
         search_html.bind('submit', function(e) {
@@ -336,6 +332,8 @@ var App = function () {
 
   self.init = function () {
 
+    console.log('console')
+
     self.pubnub = PUBNUB.init({
       publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
       subscribe_key: 'sub-cfb3b894-0a2a-11e0-a510-1d92d9e0ffba',
@@ -350,6 +348,8 @@ var App = function () {
     var data = null;
 
     $("#login-form").submit(function (e) {
+
+      alert('hit')
 
       e.preventDefault();
 
@@ -420,9 +420,9 @@ var App = function () {
 
       var data = self.get('login')
 
-      $('#username').val(data[0].value)
-      $('#password').val(data[1].value)
-      $('#remember-me').val('1')
+      $('#username').val(data[0].value);
+      $('#password').val(data[1].value);
+      $('#remember-me').val('1').slider('refresh');
       // $("#login-form").submit();
 
     }

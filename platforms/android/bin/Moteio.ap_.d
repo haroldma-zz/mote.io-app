@@ -24,7 +24,6 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/config.xml \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/cordova.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/cordova_plugins.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/cordova_plugins.json \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/font \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images \
@@ -33,6 +32,8 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/main.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/moteio.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap2.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/spec.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/css/font-awesome.min.css \
@@ -111,6 +112,11 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery-1.8.2.min.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery.mobile-1.3.1.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/retina.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/socket.io.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www/Connection.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www/network.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/images \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.min.css \
