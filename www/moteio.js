@@ -14,9 +14,21 @@ var App = function () {
 
   var self = this;
 
-  //self.remote_location = 'https://localhost:3000';
-  self.remote_location = 'https://mote.io:443';
+  // self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'http://localhost:3002';
+  // self.remote_location = 'https://mote.io:443';
   self.channel = null;
+
+  self.strencode = function( data ) {
+    return data;
+    //return unescape( encodeURIComponent( data  ) );
+  }
+
+  self.strdecode = function( data ) {
+    console.log(data)
+    return data;
+    //return JSON.parse( decodeURIComponent( data ) );
+  }
 
   self.set = function(key, data) {
     // Put the object into storage
@@ -110,7 +122,7 @@ var App = function () {
 
               data.press = true;
 
-              self.channel.emit('input', data, function () {
+              self.channel.emit('input', self.strencode(data), function () {
               });
 
             })
@@ -164,7 +176,7 @@ var App = function () {
             uuid: device.uuid
           }
 
-          self.channel.emit('select', data, function () {
+          self.channel.emit('select', self.strencode(data), function () {
 
             navigator.notification.vibrate(100);
 
@@ -196,7 +208,7 @@ var App = function () {
 
           data.query =  $("#remote-search-form").val()
 
-          self.channel.emit('search', data, function () {
+          self.channel.emit('search', self.strencode(data), function () {
 
             navigator.notification.vibrate(100);
 
@@ -226,9 +238,11 @@ var App = function () {
 
   self.listen = function () {
 
-    self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true});
+    // self.channel = io.connect(self.remote_location, {'force new connection': true, 'secure': true}); self.remote_location
+    self.channel = io.connect(self.remote_location, {'force new connection': true});
 
     self.channel.on('update-config', function (data) {
+      data = self.strdecode(data);
       console.log('update-config')
       self.renderRemote(data);
       self.channel.emit('got-config');
@@ -274,6 +288,8 @@ var App = function () {
 
     self.channel.on('notify', function (data) {
 
+      data = self.strdecode(data);
+
       var now_playing = $('.notify');
       now_playing.empty();
 
@@ -290,6 +306,8 @@ var App = function () {
     });
 
     self.channel.on('update-button', function(data){
+
+      data = self.strdecode(data);
 
       if(data.icon) {
         $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
@@ -370,6 +388,7 @@ var App = function () {
 
           } else {
             $.mobile.changePage($('#login'));
+            console.log(response)
             alert(response.reason);
           }
 
