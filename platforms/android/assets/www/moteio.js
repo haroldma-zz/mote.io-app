@@ -14,9 +14,8 @@ var App = function () {
 
   var self = this;
 
-  // self.remote_location = 'https://localhost:3000';
-  // self.remote_location = 'http://localhost:3002';
-  self.remote_location = 'https://mote.io:443';
+  self.remote_location = 'https://localhost:3000';
+  // self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
@@ -129,7 +128,9 @@ var App = function () {
           var data = self.populateHash(params.hash, data);
 
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
-            .bind('vmousedown', function (e) {
+            .bind('click', function (e) {
+
+              navigator.notification.vibrate(300);
 
               e.stopPropagation();
 
@@ -329,6 +330,8 @@ var App = function () {
 
     $('.go-home').click(function(){
 
+      navigator.notification.vibrate(300);
+
       self.pubnub.publish({
         channel : self.channel_name,
         message : {
@@ -341,6 +344,7 @@ var App = function () {
   };
 
   self.logout = function () {
+    self.pubnub.unsubscribe({ channel : self.channel_name })
     $('#remote-render').html('');
     $.mobile.changePage($('#login'));
   }
@@ -398,9 +402,9 @@ var App = function () {
 
             if(data[2].value == "1") {
               self.set('login', data);
-              $('#password').val('');
             } else {
               self.set('login', null)
+              $('#password').val('');
             }
 
             self.listen(response.user.username);

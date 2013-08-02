@@ -1,6 +1,18 @@
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background-color: red;
+  background-image: none;
+}
+.ui-body-c, .ui-overlay-c {
+  background-color: none;
+  background-image: url('../images/patterns/square_bg.png');
+}
+#status.ui-body-c {
+  background-image: url('../images/patterns/gplaypattern.png');
+}
+#remote.ui-body-c {
+  background-image: url('../images/patterns/brillant.png');
 }
 .ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button {
   font-family: 'Open Sans', sans-serif;

@@ -20,6 +20,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.core.InAppBrowser" />
     </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.core.Vibration" />
+    </feature>
     <access origin="*" />
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />

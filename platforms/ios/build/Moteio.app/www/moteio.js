@@ -14,9 +14,8 @@ var App = function () {
 
   var self = this;
 
-  // self.remote_location = 'https://localhost:3000';
-  // self.remote_location = 'http://localhost:3002';
-  self.remote_location = 'https://mote.io:443';
+  self.remote_location = 'https://localhost:3000';
+  // self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
@@ -129,7 +128,9 @@ var App = function () {
           var data = self.populateHash(params.hash, data);
 
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
-            .bind('vmousedown', function (e) {
+            .bind('click', function (e) {
+
+              navigator.notification.vibrate(300);
 
               e.stopPropagation();
 
@@ -252,17 +253,21 @@ var App = function () {
       },
       disconnect: function() {
 
+        alert('disconnected')
         self.logout();
 
       },
       reconnect: function() {
 
+        alert('reconnected')
+        /*
         self.pubnub.publish({
           channel : self.channel_name,
           message : {
             type: 'get-config'
           }
         });
+        */
 
       },
       message: function( message) {
@@ -329,6 +334,8 @@ var App = function () {
 
     $('.go-home').click(function(){
 
+      navigator.notification.vibrate(300);
+
       self.pubnub.publish({
         channel : self.channel_name,
         message : {
@@ -341,6 +348,7 @@ var App = function () {
   };
 
   self.logout = function () {
+    self.pubnub.unsubscribe({ channel : self.channel_name })
     $('#remote-render').html('');
     $.mobile.changePage($('#login'));
   }
@@ -356,7 +364,8 @@ var App = function () {
       publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
       subscribe_key: 'sub-cfb3b894-0a2a-11e0-a510-1d92d9e0ffba',
       origin        : 'pubsub.pubnub.com',
-      ssl           : true
+      ssl           : true,
+      restore       : true
     });
 
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
@@ -398,9 +407,9 @@ var App = function () {
 
             if(data[2].value == "1") {
               self.set('login', data);
-              $('#password').val('');
             } else {
               self.set('login', null)
+              $('#password').val('');
             }
 
             self.listen(response.user.username);

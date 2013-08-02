@@ -20,4 +20,5 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager$1.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/SplashScreen.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/Vibration.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/dexedLibs/cordova-3.0.0-ac99e90a8c26389f5c6cb0f4975f927e.jar \

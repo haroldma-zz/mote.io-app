@@ -49,6 +49,7 @@
 		52B9B804D11E48589556BF8E /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1602D0F4D66646039B074021 /* CDVReachability.m */; };
 		061D77DFD9B24DE58DDB8268 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F511AAB2214C9BAE79A65A /* CDVSplashScreen.m */; };
 		10904E3C5FAA4E44AE3F39B1 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D556667480E4B3A8A010AE0 /* CDVInAppBrowser.m */; };
+		83C58AE68EE5466EBC876B02 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = FB56D923842D4D0EB1FBE518 /* CDVVibration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		25326B9D7D894A34AC213DD9 /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "org.apache.cordova.core.splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		4D556667480E4B3A8A010AE0 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.core.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		C76F2114C4F64C82A095694A /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.core.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FB56D923842D4D0EB1FBE518 /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.core.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		73EBF045EEDD45A5B114AD20 /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.core.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,8 @@
 				25326B9D7D894A34AC213DD9 /* CDVSplashScreen.h */,
 				4D556667480E4B3A8A010AE0 /* CDVInAppBrowser.m */,
 				C76F2114C4F64C82A095694A /* CDVInAppBrowser.h */,
+				FB56D923842D4D0EB1FBE518 /* CDVVibration.m */,
+				73EBF045EEDD45A5B114AD20 /* CDVVibration.h */,
 			);
 			name = Plugins;
 			path = "Moteio/Plugins";
@@ -447,6 +452,7 @@
 				52B9B804D11E48589556BF8E /* CDVReachability.m in Sources */,
 				061D77DFD9B24DE58DDB8268 /* CDVSplashScreen.m in Sources */,
 				10904E3C5FAA4E44AE3F39B1 /* CDVInAppBrowser.m in Sources */,
+				83C58AE68EE5466EBC876B02 /* CDVVibration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

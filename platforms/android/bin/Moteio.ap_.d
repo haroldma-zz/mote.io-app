@@ -32,7 +32,6 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/main.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/moteio.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap2.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/spec.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes \
@@ -70,6 +69,7 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/loader.gif \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/loader@2x.gif \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/now_playing.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/real_cf.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/sync.png \
@@ -95,6 +95,14 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/icons/moteio-huge.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/icons/new-logo.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/icons/really-fucking-big.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/brillant.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/brillant_@2X.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/gplaypattern.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/gplaypattern_@2X.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/square_bg.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/square_bg_@2X.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/struckaxiom.png \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/patterns/struckaxiom_@2X.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_hdpi-p.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_hdpi.png \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/images/splashes/splash_ipad-p.png \
@@ -120,6 +128,7 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.splashscreen \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.vibration \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser/www \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser/www/InAppBrowser.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www \
@@ -127,6 +136,8 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www/network.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.splashscreen/www \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.splashscreen/www/splashscreen.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.vibration/www \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.vibration/www/vibration.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/images \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.css \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes/moteio.min.css \

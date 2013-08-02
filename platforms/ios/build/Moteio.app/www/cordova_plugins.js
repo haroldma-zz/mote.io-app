@@ -28,6 +28,13 @@ module.exports = [
         "clobbers": [
             "window.open"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.core.vibration/www/vibration.js",
+        "id": "org.apache.cordova.core.vibration.notification",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ]
 });
