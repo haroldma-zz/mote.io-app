@@ -22,6 +22,8 @@ var App = function () {
   self.pubnub = null;
   self.channel_name = null;
 
+  self.lastNotify = {};
+
   self.strencode = function( data ) {
     return data;
     //return unescape( encodeURIComponent( data  ) );
@@ -78,8 +80,8 @@ var App = function () {
       alert('Please supply an app name in the moteioConfig.')
     }
 
-    $('.ui-title').text(res.app_name);
     $('#remote-render').html('');
+
     var id = 0;
 
     for(var key in res.blocks) {
@@ -98,6 +100,16 @@ var App = function () {
         var notify = $('<div class="notify"></div>');
 
         $('#remote-render').append(wrapper.append(notify).append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>'));
+
+        $('.twitter, .facebook').click(function(){
+
+          var url = 'https://www.facebook.com/sharer/sharer.php?u=';
+          if($(this).hasClass('twitter')) {
+            url = 'http://www.twitter.com/share?url=';
+          }
+          window.open(url + encodeURIComponent('https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url)), '_blank');
+
+        });
 
       }
 
@@ -218,6 +230,7 @@ var App = function () {
     buttons = $('.moteio-button');
 
     $.mobile.changePage($('#remote'));
+    $('.ui-title').text(res.app_name);
 
   };
 
@@ -288,6 +301,11 @@ var App = function () {
           if (typeof data.line2 !== "undefined") {
             now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
           }
+
+          self.lastNotify.line1 = data.line1;
+          self.lastNotify.line2 = data.line2;
+          self.lastNotify.image = data.image;
+          self.lastNotify.url = data.url;
 
         }
 
@@ -415,6 +433,7 @@ var App = function () {
     });
 
     $('.sign-up').click(function(){
+
       var ref = window.open('https://mote.io/register', '_blank');
       ref.addEventListener('loadstart', function(event) {
         if(event.url == "https://mote.io/start") {
@@ -422,6 +441,7 @@ var App = function () {
           alert('All signed up! Now log in.');
         }
       });
+
     });
 
     if(self.get('login')) {

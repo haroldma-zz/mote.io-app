@@ -195,3 +195,59 @@
 2013-08-01 19:03:49.970 Moteio[60056:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
 2013-08-01 19:03:49.972 Moteio[60056:c07] Resetting plugins due to page load.
 2013-08-01 19:03:50.303 Moteio[60056:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 19:22:05.086 Moteio[60624:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 19:22:05.115 Moteio[60624:c07] [CDVTimer][splashscreen] 6.264985ms
+2013-08-01 19:22:05.118 Moteio[60624:c07] [CDVTimer][TotalPluginStartup] 9.389997ms
+2013-08-01 19:22:05.224 Moteio[60624:c07] Resetting plugins due to page load.
+2013-08-01 19:22:36.647 Moteio[60624:2803] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-08-01 19:22:36.651 Moteio[60624:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 19:22:36.653 Moteio[60624:c07] Resetting plugins due to page load.
+2013-08-01 19:22:37.180 Moteio[60624:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 19:23:24.196 Moteio[61028:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 19:23:24.224 Moteio[61028:c07] [CDVTimer][splashscreen] 6.151021ms
+2013-08-01 19:23:24.225 Moteio[61028:c07] [CDVTimer][TotalPluginStartup] 6.749988ms
+2013-08-01 19:23:24.273 Moteio[61028:c07] Resetting plugins due to page load.
+2013-08-01 19:23:52.912 Moteio[61028:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-08-01 19:23:52.917 Moteio[61028:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 19:23:52.919 Moteio[61028:c07] Resetting plugins due to page load.
+2013-08-01 19:23:53.409 Moteio[61028:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 19:24:19.111 Moteio[61660:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 19:24:19.130 Moteio[61660:c07] [CDVTimer][splashscreen] 7.484019ms
+2013-08-01 19:24:19.131 Moteio[61660:c07] [CDVTimer][TotalPluginStartup] 8.032024ms
+2013-08-01 19:24:19.163 Moteio[61660:c07] Resetting plugins due to page load.
+2013-08-01 19:24:26.028 Moteio[61660:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 19:24:26.031 Moteio[61660:c07] Resetting plugins due to page load.
+2013-08-01 19:24:26.612 Moteio[61660:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 20:35:26.246 Moteio[63588:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 20:35:26.269 Moteio[63588:c07] [CDVTimer][splashscreen] 9.442985ms
+2013-08-01 20:35:26.270 Moteio[63588:c07] [CDVTimer][TotalPluginStartup] 10.132015ms
+2013-08-01 20:35:26.302 Moteio[63588:c07] Resetting plugins due to page load.
+2013-08-01 20:35:37.829 Moteio[63588:2803] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-08-01 20:35:37.835 Moteio[63588:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 20:35:37.837 Moteio[63588:c07] Resetting plugins due to page load.
+2013-08-01 20:35:38.515 Moteio[63588:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 20:41:09.945 Moteio[63588:c07] CDVWebViewDelegate: Navigation started when state=1
+2013-08-01 20:41:09.946 Moteio[63588:c07] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2013-08-01 20:41:09.950 Moteio[63588:c07] Resetting plugins due to page load.
+2013-08-01 20:41:10.791 Moteio[63588:c07] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2013-08-01 20:41:10.792 Moteio[63588:c07] Resetting plugins due to page load.
+2013-08-01 20:41:11.246 Moteio[63588:c07] Finished load of: https://m.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fmote.io%252Fshare%253Fline1%253DYuna%2526line2%253DI%252520Wanna%252520Go%252520%2528Belarbi%252520Remix%2529%2526image%253Dhttp%253A%252F%252Fstatic-ak.hypem.net%252Fthumbs_new%252Fe0%252F2255840.png%2526remote%253DHype%252520Machine%2526url%253Dhttp%25253A%25252F%25252Fhypem.com%25252Fpopular&display=popup
+2013-08-01 20:43:16.733 Moteio[64069:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 20:43:16.761 Moteio[64069:c07] [CDVTimer][splashscreen] 4.662037ms
+2013-08-01 20:43:16.761 Moteio[64069:c07] [CDVTimer][TotalPluginStartup] 5.196989ms
+2013-08-01 20:43:16.846 Moteio[64069:c07] Resetting plugins due to page load.
+2013-08-01 20:43:23.792 Moteio[64069:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 20:43:23.793 Moteio[64069:c07] Resetting plugins due to page load.
+2013-08-01 20:43:24.299 Moteio[64069:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-01 20:47:39.128 Moteio[64656:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 20:47:39.147 Moteio[64656:c07] [CDVTimer][splashscreen] 7.532001ms
+2013-08-01 20:47:39.148 Moteio[64656:c07] [CDVTimer][TotalPluginStartup] 8.054972ms
+2013-08-01 20:47:39.182 Moteio[64656:c07] Resetting plugins due to page load.
+2013-08-01 20:48:53.954 Moteio[65048:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-01 20:48:53.977 Moteio[65048:c07] [CDVTimer][splashscreen] 5.472004ms
+2013-08-01 20:48:53.978 Moteio[65048:c07] [CDVTimer][TotalPluginStartup] 6.033003ms
+2013-08-01 20:48:54.045 Moteio[65048:c07] Resetting plugins due to page load.
+2013-08-01 20:50:27.952 Moteio[65048:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-08-01 20:50:27.957 Moteio[65048:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-01 20:50:27.959 Moteio[65048:c07] Resetting plugins due to page load.
+2013-08-01 20:50:28.476 Moteio[65048:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html

@@ -7,6 +7,17 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$string.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$xml.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$1.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$1.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$2.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$3.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$4.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$5.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$InAppBrowserClient.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$InAppChromeClient.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager$1.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/NetworkManager.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/SplashScreen.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/dexedLibs/cordova-3.0.0-ac99e90a8c26389f5c6cb0f4975f927e.jar \

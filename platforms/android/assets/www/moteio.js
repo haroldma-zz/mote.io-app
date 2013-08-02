@@ -22,6 +22,8 @@ var App = function () {
   self.pubnub = null;
   self.channel_name = null;
 
+  self.lastNotify = {};
+
   self.strencode = function( data ) {
     return data;
     //return unescape( encodeURIComponent( data  ) );
@@ -78,8 +80,8 @@ var App = function () {
       alert('Please supply an app name in the moteioConfig.')
     }
 
-    $('.ui-title').text(res.app_name);
     $('#remote-render').html('');
+
     var id = 0;
 
     for(var key in res.blocks) {
@@ -97,7 +99,17 @@ var App = function () {
         wrapper = $('<div class="block"></div>');
         var notify = $('<div class="notify"></div>');
 
-        $('#remote-render').append(wrapper.append(notify).append('<div class="block share" style="display: none;"><div class="buttons"><span class="icon-facebook facebook moteio-button"></span><span class="moteio-button icon-twitter twitter"></span></div></div>'));
+        $('#remote-render').append(wrapper.append(notify).append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>'));
+
+        $('.twitter, .facebook').click(function(){
+
+          var url = 'https://www.facebook.com/sharer/sharer.php?u=';
+          if($(this).hasClass('twitter')) {
+            url = 'http://www.twitter.com/share?url=';
+          }
+          window.open(url + encodeURIComponent('https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url)), '_blank');
+
+        });
 
       }
 
@@ -116,7 +128,7 @@ var App = function () {
 
           var data = self.populateHash(params.hash, data);
 
-          element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button icon-' + button.icon + '" /></span>')
+          element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
             .bind('vmousedown', function (e) {
 
               e.stopPropagation();
@@ -218,6 +230,7 @@ var App = function () {
     buttons = $('.moteio-button');
 
     $.mobile.changePage($('#remote'));
+    $('.ui-title').text(res.app_name);
 
   };
 
@@ -289,12 +302,17 @@ var App = function () {
             now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
           }
 
+          self.lastNotify.line1 = data.line1;
+          self.lastNotify.line2 = data.line2;
+          self.lastNotify.image = data.image;
+          self.lastNotify.url = data.url;
+
         }
 
         if(message.type == 'update-button') {
 
           if(data.icon) {
-            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button icon-' + data.icon);
+            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
           }
 
           if(data.color) {
@@ -349,8 +367,6 @@ var App = function () {
 
     $("#login-form").submit(function (e) {
 
-      alert('hit')
-
       e.preventDefault();
 
       console.log('login form submit')
@@ -382,6 +398,7 @@ var App = function () {
 
             if(data[2].value == "1") {
               self.set('login', data);
+              $('#password').val('');
             } else {
               self.set('login', null)
             }
@@ -410,10 +427,21 @@ var App = function () {
 
     });
 
-    $('#logout').click(function(){
-      self.shush();
+    $('.logout').click(function(){
       self.logout();
       $.mobile.changePage($('#login'));
+    });
+
+    $('.sign-up').click(function(){
+
+      var ref = window.open('https://mote.io/register', '_blank');
+      ref.addEventListener('loadstart', function(event) {
+        if(event.url == "https://mote.io/start") {
+          ref.close();
+          alert('All signed up! Now log in.');
+        }
+      });
+
     });
 
     if(self.get('login')) {
@@ -433,6 +461,7 @@ var App = function () {
       $.mobile.useFastClick = true;
     });
 
+    navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));
 
   };

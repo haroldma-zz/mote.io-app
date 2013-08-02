@@ -14,6 +14,12 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.core.NetworkManager" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.core.SplashScreen" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.core.InAppBrowser" />
+    </feature>
     <access origin="*" />
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
@@ -31,10 +37,4 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.core.SplashScreen" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.core.InAppBrowser" />
-    </feature>
 </widget>

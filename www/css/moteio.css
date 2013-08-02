@@ -5,6 +5,11 @@ html, body {
 .ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button {
   font-family: 'Open Sans', sans-serif;
 }
+.ui-header .ui-title, .ui-footer .ui-title {
+  margin: auto !important;
+  height: 2.4em;
+  line-height: 2.4em;
+}
 #loading-image {
   position: absolute;
   top: 50%;
@@ -91,7 +96,8 @@ html, body {
   border-radius: 3px;
 }
 .notify .line {
-  line-height: 25px;
+  line-height: 27px;
+  font-size: 14px;
   margin: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
