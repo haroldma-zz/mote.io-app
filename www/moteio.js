@@ -98,7 +98,11 @@ var App = function () {
         wrapper = $('<div class="block"></div>');
         var notify = $('<div class="notify"></div>');
 
-        $('#remote-render').append(wrapper.append(notify).append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>'));
+        $('#remote-render').append(wrapper.append(notify));
+
+        if(typeof params.share !== "undefined" && params.share) {
+          wrapper.append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>');
+        }
 
         $('.twitter, .facebook').click(function(){
 
