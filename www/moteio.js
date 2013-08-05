@@ -23,17 +23,6 @@ var App = function () {
 
   self.lastNotify = {};
 
-  self.strencode = function( data ) {
-    return data;
-    //return unescape( encodeURIComponent( data  ) );
-  }
-
-  self.strdecode = function( data ) {
-    console.log(data)
-    return data;
-    //return JSON.parse( decodeURIComponent( data ) );
-  }
-
   self.set = function(key, data) {
     // Put the object into storage
     localStorage.setItem(key, JSON.stringify(data));
