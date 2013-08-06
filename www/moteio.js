@@ -148,7 +148,13 @@ var App = function () {
 
       if(type == "select") {
 
+        console.log('!SELECT')
+
         var select_html = $('<select class="render-select"></select>');
+
+        if(typeof params.title !== "undefined") {
+          select_html.append($('<option>' + params.title + '</option>'));
+        }
 
         for(var option in params.data){
           var option_html = $('<option value="' + option + '" data-paramid="' + params._id + '">' + params.data[option].text + '</option>');
@@ -253,19 +259,19 @@ var App = function () {
       reconnect: function() {
 
         alert('reconnected')
-        /*
         self.pubnub.publish({
           channel : self.channel_name,
           message : {
             type: 'get-config'
           }
         });
-        */
 
       },
       message: function( message) {
 
+        console.log('got message!')
         console.log(message);
+
         var data = null;
         if(message.data !== "undefined") {
           data = message.data;
