@@ -15,7 +15,7 @@ var App = function () {
   var self = this;
 
   self.remote_location = 'https://localhost:3000';
-  // self.remote_location = 'https://mote.io:443';
+  //self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
@@ -93,7 +93,7 @@ var App = function () {
           wrapper.append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>');
         }
 
-        $('.twitter, .facebook').click(function(){
+        $('.twitter, .facebook').bind('vclick', function(){
 
           var url = 'https://www.facebook.com/sharer/sharer.php?u=';
           if($(this).hasClass('twitter')) {
@@ -121,7 +121,7 @@ var App = function () {
           var data = self.populateHash(params.hash, data);
 
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
-            .bind('click', function (e) {
+            .bind('vclick', function (e) {
 
               navigator.notification.vibrate(300);
 
@@ -331,7 +331,7 @@ var App = function () {
 
     });
 
-    $('.go-home').click(function(){
+    $('.go-home').bind('vclick', function(){
 
       navigator.notification.vibrate(300);
 
@@ -435,12 +435,12 @@ var App = function () {
 
     });
 
-    $('.logout').click(function(){
+    $('.logout').bind('vclick', function(){
       self.logout();
       $.mobile.changePage($('#login'));
     });
 
-    $('.sign-up').click(function(){
+    $('.sign-up').bind('vclick', function(){
 
       var ref = window.open('https://mote.io/register', '_blank');
       ref.addEventListener('loadstart', function(event) {
@@ -462,12 +462,6 @@ var App = function () {
       // $("#login-form").submit();
 
     }
-
-    $(document).bind("mobileinit", function(){
-      $.mobile.defaultPageTransition = 'none';
-      $.mobile.defaultDialogTransition = 'none';
-      $.mobile.useFastClick = true;
-    });
 
     navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));

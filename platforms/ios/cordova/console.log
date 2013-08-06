@@ -257,3 +257,19 @@ Terminating in response to SpringBoard's termination.
 2013-08-02 12:37:36.338 Moteio[69926:c07] [CDVTimer][TotalPluginStartup] 11.568010ms
 2013-08-02 12:37:36.366 Moteio[69926:c07] Resetting plugins due to page load.
 Terminating in response to SpringBoard's termination.
+2013-08-06 13:42:27.538 Moteio[84637:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-06 13:42:27.753 Moteio[84637:c07] [CDVTimer][splashscreen] 46.895027ms
+2013-08-06 13:42:27.754 Moteio[84637:c07] [CDVTimer][TotalPluginStartup] 47.612011ms
+2013-08-06 13:42:27.796 Moteio[84637:c07] Resetting plugins due to page load.
+2013-08-06 13:42:29.257 Moteio[84637:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-06 13:42:29.262 Moteio[84637:c07] Resetting plugins due to page load.
+2013-08-06 13:42:29.786 Moteio[84637:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
+2013-08-06 14:04:27.944 Moteio[84637:c07] THREAD WARNING: ['InAppBrowser'] took '17.190186' ms. Plugin should use a background thread.
+2013-08-06 14:20:36.045 Moteio[85572:c07] Multi-tasking -> Device: YES, App: YES
+2013-08-06 14:20:36.069 Moteio[85572:c07] [CDVTimer][splashscreen] 5.522966ms
+2013-08-06 14:20:36.069 Moteio[85572:c07] [CDVTimer][TotalPluginStartup] 6.013989ms
+2013-08-06 14:20:36.139 Moteio[85572:c07] Resetting plugins due to page load.
+2013-08-06 14:20:58.471 Moteio[85572:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-08-06 14:20:58.476 Moteio[85572:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/index.html
+2013-08-06 14:20:58.478 Moteio[85572:c07] Resetting plugins due to page load.
+2013-08-06 14:20:58.963 Moteio[85572:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html

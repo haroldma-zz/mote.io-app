@@ -14,25 +14,14 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3000';
-  // self.remote_location = 'https://mote.io:443';
+  //self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
   self.channel_name = null;
 
   self.lastNotify = {};
-
-  self.strencode = function( data ) {
-    return data;
-    //return unescape( encodeURIComponent( data  ) );
-  }
-
-  self.strdecode = function( data ) {
-    console.log(data)
-    return data;
-    //return JSON.parse( decodeURIComponent( data ) );
-  }
 
   self.set = function(key, data) {
     // Put the object into storage
@@ -98,7 +87,11 @@ var App = function () {
         wrapper = $('<div class="block"></div>');
         var notify = $('<div class="notify"></div>');
 
-        $('#remote-render').append(wrapper.append(notify).append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>'));
+        $('#remote-render').append(wrapper.append(notify));
+
+        if(typeof params.share !== "undefined" && params.share) {
+          wrapper.append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>');
+        }
 
         $('.twitter, .facebook').click(function(){
 
@@ -155,7 +148,13 @@ var App = function () {
 
       if(type == "select") {
 
+        console.log('!SELECT')
+
         var select_html = $('<select class="render-select"></select>');
+
+        if(typeof params.title !== "undefined") {
+          select_html.append($('<option>' + params.title + '</option>'));
+        }
 
         for(var option in params.data){
           var option_html = $('<option value="' + option + '" data-paramid="' + params._id + '">' + params.data[option].text + '</option>');
@@ -253,11 +252,13 @@ var App = function () {
       },
       disconnect: function() {
 
+        alert('disconnected')
         self.logout();
 
       },
       reconnect: function() {
 
+        alert('reconnected')
         self.pubnub.publish({
           channel : self.channel_name,
           message : {
@@ -268,7 +269,9 @@ var App = function () {
       },
       message: function( message) {
 
+        console.log('got message!')
         console.log(message);
+
         var data = null;
         if(message.data !== "undefined") {
           data = message.data;
@@ -360,7 +363,8 @@ var App = function () {
       publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
       subscribe_key: 'sub-cfb3b894-0a2a-11e0-a510-1d92d9e0ffba',
       origin        : 'pubsub.pubnub.com',
-      ssl           : true
+      ssl           : true,
+      restore       : true
     });
 
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
@@ -407,7 +411,7 @@ var App = function () {
               $('#password').val('');
             }
 
-            self.listen(response.user.username);
+            self.listen(response.channel_name);
 
             console.log('waiting for sync')
             $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');

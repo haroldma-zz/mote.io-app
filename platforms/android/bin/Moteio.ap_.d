@@ -31,7 +31,7 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/main.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/moteio.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap2.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/spec.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/themes \
