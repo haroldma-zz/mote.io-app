@@ -7,6 +7,8 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$string.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R$xml.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/com/ianjennings/mote_io/R.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/BatteryListener$1.class \
+/Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/BatteryListener.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$1.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$1.class \
 /Users/Jennings/Development/mote.io-app/platforms/android/bin/classes/org/apache/cordova/core/InAppBrowser$2$2.class \

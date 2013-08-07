@@ -14,8 +14,8 @@ var App = function () {
 
   var self = this;
 
-  self.remote_location = 'https://localhost:3000';
-  //self.remote_location = 'https://mote.io:443';
+  //self.remote_location = 'https://localhost:3000';
+  self.remote_location = 'https://mote.io:443';
   self.channel = null;
 
   self.pubnub = null;
@@ -37,14 +37,6 @@ var App = function () {
       return false;
     }
   }
-
-  self.shush = function () {
-    if (self.channel) {
-      self.channel.disconnect();
-    } else {
-      // console.log('not connected to any channels yet');
-    }
-  };
 
   self.populateHash = function (given, fallback) {
     if(typeof given !== "undefined" && given) {
@@ -95,11 +87,31 @@ var App = function () {
 
         $('.twitter, .facebook').bind('vclick', function(){
 
-          var url = 'https://www.facebook.com/sharer/sharer.php?u=';
+          var url = 'https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url);
           if($(this).hasClass('twitter')) {
-            url = 'http://www.twitter.com/share?url=';
+            window.open('http://www.twitter.com/share?url=' + url, '_blank');
+          } else {
+
+            var text = 'I\'m controlling ' + self.lastNotify.line1;
+            if(self.lastNotify.line2) {
+              text += ' - ' + self.lastNotify.line2
+            }
+            text += ' on ' + $('.ui-title').text() + ' with the Mote.io mobile app.';
+
+            var params = {
+              method: 'feed',
+              name: 'Mote.io',
+              link: url,
+              picture: 'https://mote.io/images/144-2x.png',
+              caption: 'I\'m controlling ' + $('.ui-title').text() + ' with Mote.io!',
+              description: text
+            };
+
+            console.log(params);
+
+            FB.ui(params, function(obj) { console.log(obj);});
+
           }
-          window.open(url + encodeURIComponent('https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url)), '_blank');
 
         });
 
@@ -207,7 +219,7 @@ var App = function () {
 
         search_html.bind('submit', function(e) {
 
-          data.query =  $("#remote-search-form").val();
+          data.query =  $("#remote-search").val();
 
           self.pubnub.publish({
             channel : self.channel_name,
@@ -216,6 +228,8 @@ var App = function () {
               data: data
             }
           });
+
+          return false;
 
         });
 
@@ -238,111 +252,115 @@ var App = function () {
 
     self.channel_name = channel_name;
 
-    self.pubnub.subscribe({
-      channel: self.channel_name,
-      connect: function() {
+    if(channel_name) {
 
-        self.pubnub.publish({
-          channel : self.channel_name,
-          message : {
-            type: 'get-config'
-          }
-        });
-
-      },
-      disconnect: function() {
-
-        alert('disconnected')
-        self.logout();
-
-      },
-      reconnect: function() {
-
-        alert('reconnected')
-        self.pubnub.publish({
-          channel : self.channel_name,
-          message : {
-            type: 'get-config'
-          }
-        });
-
-      },
-      message: function( message) {
-
-        console.log('got message!')
-        console.log(message);
-
-        var data = null;
-        if(message.data !== "undefined") {
-          data = message.data;
-        }
-
-        if(message.type == 'update-config') {
-
-          console.log('update-config')
-          self.renderRemote(data);
+      self.pubnub.subscribe({
+        channel: self.channel_name,
+        connect: function() {
 
           self.pubnub.publish({
             channel : self.channel_name,
             message : {
-              type: 'got-config'
+              type: 'get-config'
             }
           });
 
-        }
+        },
+        disconnect: function() {
 
-        if(message.type == 'notify') {
+          alert('disconnected')
+          self.logout();
 
-          var now_playing = $('.notify');
-          now_playing.empty();
+        },
+        reconnect: function() {
 
-          if (typeof data.image !== "undefined") {
-            now_playing.append('<img src="' + data.image + '" class="thumb" />');
-          }
-          if (typeof data.line1 !== "undefined") {
-            now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
-          }
-          if (typeof data.line2 !== "undefined") {
-            now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
-          }
+          alert('reconnected')
+          self.pubnub.publish({
+            channel : self.channel_name,
+            message : {
+              type: 'get-config'
+            }
+          });
 
-          self.lastNotify.line1 = data.line1;
-          self.lastNotify.line2 = data.line2;
-          self.lastNotify.image = data.image;
-          self.lastNotify.url = data.url;
+        },
+        message: function( message) {
 
-        }
+          console.log('got message!')
+          console.log(message);
 
-        if(message.type == 'update-button') {
-
-          if(data.icon) {
-            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
+          var data = null;
+          if(message.data !== "undefined") {
+            data = message.data;
           }
 
-          if(data.color) {
-            $('#moteio-button-' + data.hash).css({
-              'color': data.color
+          if(message.type == 'update-config') {
+
+            console.log('update-config')
+            self.renderRemote(data);
+
+            self.pubnub.publish({
+              channel : self.channel_name,
+              message : {
+                type: 'got-config'
+              }
             });
+
+          }
+
+          if(message.type == 'notify') {
+
+            var now_playing = $('.notify');
+            now_playing.empty();
+
+            if (typeof data.image !== "undefined") {
+              now_playing.append('<img src="' + data.image + '" class="thumb" />');
+            }
+            if (typeof data.line1 !== "undefined") {
+              now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
+            }
+            if (typeof data.line2 !== "undefined") {
+              now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
+            }
+
+            self.lastNotify.line1 = data.line1;
+            self.lastNotify.line2 = data.line2;
+            self.lastNotify.image = data.image;
+            self.lastNotify.url = data.url;
+
+          }
+
+          if(message.type == 'update-button') {
+
+            if(data.icon) {
+              $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
+            }
+
+            if(data.color) {
+              $('#moteio-button-' + data.hash).css({
+                'color': data.color
+              });
+            }
+
           }
 
         }
 
-      }
-
-    });
-
-    $('.go-home').bind('vclick', function(){
-
-      navigator.notification.vibrate(300);
-
-      self.pubnub.publish({
-        channel : self.channel_name,
-        message : {
-          type: 'go-home'
-        }
       });
 
-    });
+      $('.go-home').bind('vclick', function(){
+
+        navigator.notification.vibrate(300);
+
+        self.pubnub.publish({
+          channel : self.channel_name,
+          message : {
+            type: 'go-home'
+          }
+        });
+
+      });
+
+    }
 
   };
 
@@ -353,6 +371,15 @@ var App = function () {
   }
 
   self.offline = function() {
+  }
+
+  self.pause = function() {
+    console.log('paused');
+  }
+
+  self.resume = function() {
+    console.log('resumed!');
+    self.listen(self.channel_name);
   }
 
   self.init = function () {
@@ -374,8 +401,6 @@ var App = function () {
     var data = null;
 
     $("#login-form").submit(function (e) {
-
-      e.preventDefault();
 
       console.log('login form submit')
 

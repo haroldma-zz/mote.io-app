@@ -31,6 +31,7 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/main.html \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/moteio.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/phonegap2.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/spec.html \
@@ -124,11 +125,13 @@
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery-1.8.2.min.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/jquery.mobile-1.3.1.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/retina.js \
-/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/js/socket.io.js \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.battery-status \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.splashscreen \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.vibration \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.battery-status/www \
+/Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.battery-status/www/battery.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser/www \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.inappbrowser/www/InAppBrowser.js \
 /Users/Jennings/Development/mote.io-app/platforms/android/assets/www/plugins/org.apache.cordova.core.network-information/www \

@@ -1,9 +1,10 @@
 ffffffffffffffffffffffffffffffff c6d6e0f2d10a5e8c54b38dab1ab2c3e3 ffffffffffffffffffffffffffffffff 748 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app
-00000000000000000000000000000000 e9cdaf81d91ac65e57b6220794191127 ffffffffffffffffffffffffffffffff 2791 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/config.xml
+00000000000000000000000000000000 e9cdaf81d91ac65e57b6220794191127 ffffffffffffffffffffffffffffffff 2891 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/config.xml
 00000000000000000000000000000000 cb45f48b7d83212f0e793ed38fc14321 ffffffffffffffffffffffffffffffff 1034 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/Info.plist
 00000000000000000000000000000000 cb45f48b7d83212f0e793ed38fc14321 ffffffffffffffffffffffffffffffff 0 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/PkgInfo
 ffffffffffffffffffffffffffffffff a9101fff6640de85ad95a3b7647ddf34 ffffffffffffffffffffffffffffffff 102 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app.dSYM
-ffffffffffffffffffffffffffffffff e5453a043d0e28947e4972e7ca48f859 ffffffffffffffffffffffffffffffff 389152 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/Moteio
+ffffffffffffffffffffffffffffffff e5453a043d0e28947e4972e7ca48f859 ffffffffffffffffffffffffffffffff 396208 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.app/Moteio
+6eef517f998f8246cb9648d43c53b8cf 8212d687ef058b1bc3e9824f7d1143ac ffffffffffffffffffffffffffffffff 87196 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.build/Debug-iphonesimulator/Moteio.build/Objects-normal/i386/CDVBattery.o
 6eef517f9a753808cb9648d43c53ad46 b41a697106615f214de74ea11dbcabe4 ffffffffffffffffffffffffffffffff 69136 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.build/Debug-iphonesimulator/Moteio.build/Objects-normal/i386/CDVVibration.o
 6eef517f9a743176cb9648d43c532bf4 44e20d6edda693020a61a7bafe69ab07 ffffffffffffffffffffffffffffffff 216680 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.build/Debug-iphonesimulator/Moteio.build/Objects-normal/i386/CDVInAppBrowser.o
 6eef517f9a743147cb9648d43c538e06 cd544cac1838df787c4bfbd6eb4aaede ffffffffffffffffffffffffffffffff 98176 /Users/Jennings/Development/mote.io-app/platforms/ios/build/Moteio.build/Debug-iphonesimulator/Moteio.build/Objects-normal/i386/CDVSplashScreen.o

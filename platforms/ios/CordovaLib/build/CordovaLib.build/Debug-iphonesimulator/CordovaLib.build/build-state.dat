@@ -4,41 +4,41 @@ r1
 cCheck dependencies
 cCpHeader Classes/NSDictionary+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
 cCpHeader Classes/NSData+Base64.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSData+Base64.h
+cCpHeader Classes/CDVInvokedUrlCommand.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
 cCpHeader Classes/CDVPluginResult.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVPluginResult.h
 cCpHeader Classes/CDVPlugin.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVPlugin.h
-cCpHeader Classes/CDVInvokedUrlCommand.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
 cCpHeader Classes/CDVDebug.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVDebug.h
-cCpHeader Classes/CDVWhitelist.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWhitelist.h
 cCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+cCpHeader Classes/CDVWhitelist.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWhitelist.h
 cCpHeader Classes/CDVURLProtocol.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVURLProtocol.h
 cCpHeader Classes/CDVViewController.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVViewController.h
 cCpHeader Classes/CDVCommandDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
 cCpHeader Classes/CDV.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDV.h
-cCpHeader Classes/CDVAvailability.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVAvailability.h
 cCpHeader Classes/CDVLocalStorage.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVLocalStorage.h
+cCpHeader Classes/CDVAvailability.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVAvailability.h
 cCpHeader Classes/UIDevice+Extensions.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
-cCpHeader Classes/CDVEcho.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVEcho.h
 cCpHeader Classes/NSArray+Comparisons.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
+cCpHeader Classes/CDVEcho.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVEcho.h
 cCpHeader Classes/CDVCommandDelegateImpl.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
 cCpHeader Classes/CDVCommandQueue.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVCommandQueue.h
-cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
 cCpHeader Classes/CDVShared.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVShared.h
 cCpHeader Classes/CDVConfigParser.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVConfigParser.h
+cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
 cCpHeader Classes/CDVJSON.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVJSON.h
 cCpHeader Classes/CDVWebViewDelegate.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
-cCpHeader Classes/CDVUserAgentUtil.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
 cCpHeader Classes/CDVTimer.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVTimer.h
+cCpHeader Classes/CDVUserAgentUtil.h /Users/Jennings/Development/mote.io-app/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
 cProcessPCH /var/folders/j9/9hyy10vd64db0_5bwwy78gwr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-gsntmkwvxehfsxbwgjosmwpczjnl/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVEcho.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVEcho.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -47,8 +47,8 @@ cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/Jennings/Development/mote.io-app/platforms/ios/build/libCordova.a normal i386
 
@@ -500,7 +500,7 @@ s2841836
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies6d8e9ff275b1b741^0f42bcf275b1b741^---0#1#0#--18"Check dependencies36"59667C63-BD96-4AD4-A837-2FB7FDB8B68C-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies123012f8a4b1b741^272f36f8a4b1b741^---0#1#0#--18"Check dependencies36"4F76C0B4-B4B2-4E6C-A285-506845AA88B9-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/Jennings/Development/mote.io-app/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s397081876.739682

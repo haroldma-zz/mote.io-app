@@ -38,14 +38,6 @@ var App = function () {
     }
   }
 
-  self.shush = function () {
-    if (self.channel) {
-      self.channel.disconnect();
-    } else {
-      // console.log('not connected to any channels yet');
-    }
-  };
-
   self.populateHash = function (given, fallback) {
     if(typeof given !== "undefined" && given) {
       return given;
@@ -93,7 +85,7 @@ var App = function () {
           wrapper.append('<div class="block share"><div class="buttons"><span class="icon-facebook facebook moteio-button ui-btn-up-a"></span><span class="moteio-button ui-btn-up-a icon-twitter twitter"></span></div></div>');
         }
 
-        $('.twitter, .facebook').click(function(){
+        $('.twitter, .facebook').bind('vclick', function(){
 
           var url = 'https://www.facebook.com/sharer/sharer.php?u=';
           if($(this).hasClass('twitter')) {
@@ -121,7 +113,7 @@ var App = function () {
           var data = self.populateHash(params.hash, data);
 
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
-            .bind('click', function (e) {
+            .bind('vclick', function (e) {
 
               navigator.notification.vibrate(300);
 
@@ -238,111 +230,116 @@ var App = function () {
 
     self.channel_name = channel_name;
 
-    self.pubnub.subscribe({
-      channel: self.channel_name,
-      connect: function() {
+    if(channel_name) {
 
-        self.pubnub.publish({
-          channel : self.channel_name,
-          message : {
-            type: 'get-config'
-          }
-        });
 
-      },
-      disconnect: function() {
-
-        alert('disconnected')
-        self.logout();
-
-      },
-      reconnect: function() {
-
-        alert('reconnected')
-        self.pubnub.publish({
-          channel : self.channel_name,
-          message : {
-            type: 'get-config'
-          }
-        });
-
-      },
-      message: function( message) {
-
-        console.log('got message!')
-        console.log(message);
-
-        var data = null;
-        if(message.data !== "undefined") {
-          data = message.data;
-        }
-
-        if(message.type == 'update-config') {
-
-          console.log('update-config')
-          self.renderRemote(data);
+      self.pubnub.subscribe({
+        channel: self.channel_name,
+        connect: function() {
 
           self.pubnub.publish({
             channel : self.channel_name,
             message : {
-              type: 'got-config'
+              type: 'get-config'
             }
           });
 
-        }
+        },
+        disconnect: function() {
 
-        if(message.type == 'notify') {
+          alert('disconnected')
+          self.logout();
 
-          var now_playing = $('.notify');
-          now_playing.empty();
+        },
+        reconnect: function() {
 
-          if (typeof data.image !== "undefined") {
-            now_playing.append('<img src="' + data.image + '" class="thumb" />');
-          }
-          if (typeof data.line1 !== "undefined") {
-            now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
-          }
-          if (typeof data.line2 !== "undefined") {
-            now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
-          }
+          alert('reconnected')
+          self.pubnub.publish({
+            channel : self.channel_name,
+            message : {
+              type: 'get-config'
+            }
+          });
 
-          self.lastNotify.line1 = data.line1;
-          self.lastNotify.line2 = data.line2;
-          self.lastNotify.image = data.image;
-          self.lastNotify.url = data.url;
+        },
+        message: function( message) {
 
-        }
+          console.log('got message!')
+          console.log(message);
 
-        if(message.type == 'update-button') {
-
-          if(data.icon) {
-            $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
+          var data = null;
+          if(message.data !== "undefined") {
+            data = message.data;
           }
 
-          if(data.color) {
-            $('#moteio-button-' + data.hash).css({
-              'color': data.color
+          if(message.type == 'update-config') {
+
+            console.log('update-config')
+            self.renderRemote(data);
+
+            self.pubnub.publish({
+              channel : self.channel_name,
+              message : {
+                type: 'got-config'
+              }
             });
+
+          }
+
+          if(message.type == 'notify') {
+
+            var now_playing = $('.notify');
+            now_playing.empty();
+
+            if (typeof data.image !== "undefined") {
+              now_playing.append('<img src="' + data.image + '" class="thumb" />');
+            }
+            if (typeof data.line1 !== "undefined") {
+              now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
+            }
+            if (typeof data.line2 !== "undefined") {
+              now_playing.append('<div class="line line-2">' + data.line2 + '</p>');
+            }
+
+            self.lastNotify.line1 = data.line1;
+            self.lastNotify.line2 = data.line2;
+            self.lastNotify.image = data.image;
+            self.lastNotify.url = data.url;
+
+          }
+
+          if(message.type == 'update-button') {
+
+            if(data.icon) {
+              $('#moteio-button-' + data.hash).removeClass().addClass('moteio-button ui-btn-up-a icon-' + data.icon);
+            }
+
+            if(data.color) {
+              $('#moteio-button-' + data.hash).css({
+                'color': data.color
+              });
+            }
+
           }
 
         }
 
-      }
-
-    });
-
-    $('.go-home').click(function(){
-
-      navigator.notification.vibrate(300);
-
-      self.pubnub.publish({
-        channel : self.channel_name,
-        message : {
-          type: 'go-home'
-        }
       });
 
-    });
+      $('.go-home').bind('vclick', function(){
+
+        navigator.notification.vibrate(300);
+
+        self.pubnub.publish({
+          channel : self.channel_name,
+          message : {
+            type: 'go-home'
+          }
+        });
+
+      });
+
+    }
 
   };
 
@@ -353,6 +350,15 @@ var App = function () {
   }
 
   self.offline = function() {
+  }
+
+  self.pause = function() {
+    console.log('paused');
+  }
+
+  self.resume = function() {
+    console.log('resumed!');
+    self.listen(self.channel_name);
   }
 
   self.init = function () {
@@ -435,12 +441,12 @@ var App = function () {
 
     });
 
-    $('.logout').click(function(){
+    $('.logout').bind('vclick', function(){
       self.logout();
       $.mobile.changePage($('#login'));
     });
 
-    $('.sign-up').click(function(){
+    $('.sign-up').bind('vclick', function(){
 
       var ref = window.open('https://mote.io/register', '_blank');
       ref.addEventListener('loadstart', function(event) {
@@ -462,12 +468,6 @@ var App = function () {
       // $("#login-form").submit();
 
     }
-
-    $(document).bind("mobileinit", function(){
-      $.mobile.defaultPageTransition = 'none';
-      $.mobile.defaultDialogTransition = 'none';
-      $.mobile.useFastClick = true;
-    });
 
     navigator.splashscreen.hide();
     $.mobile.changePage($('#login'));

@@ -35,6 +35,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.core.battery-status/www/battery.js",
+        "id": "org.apache.cordova.core.battery-status.battery",
+        "clobbers": [
+            "navigator.battery"
+        ]
     }
 ]
 });

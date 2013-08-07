@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: red;
   background-image: none;
 }
 .ui-body-c, .ui-overlay-c {
