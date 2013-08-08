@@ -6,7 +6,7 @@
         id        = "com.ianjennings.mote-io"
         version   = "1.0.0">
 
-    <name>Moteio</name>
+    <name>Mote.io</name>
 
     <description>
         Control websites with your phone!
@@ -20,6 +20,12 @@
         Enable individual API permissions by defining each here.
         The 'device' permission is required for the 'deviceready' event.
     -->
+
+     <feature name="debug-server" required="true">
+        <param name="domain" value="http://debug.phonegap.com"/>
+        <param name="key" value="moteio"/>
+     </feature>
+
     <feature name="http://api.phonegap.com/1.0/file" />
     <feature name="http://api.phonegap.com/1.0/network" />
     <feature name="http://api.phonegap.com/1.0/device" />
@@ -92,6 +98,11 @@
     <gap:splash src="images/splashes/splash_mdpi-p.png" gap:platform="android" gap:density="mdpi" width="320" height="480" />
     <gap:splash src="images/splashes/splash_hdpi-p.png" gap:platform="android" gap:density="hdpi" width="480" height="800" />
     <gap:splash src="images/splashes/splash_xhdpi-p.png" gap:platform="android" gap:density="xhdpi" width="1280" height="720" />
+
+     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
+         <param name="APP_ID" value="163150470537618" />
+         <param name="APP_NAME" value="Mote.io" />
+     </gap:plugin>
 
     <access origin="*" />
 

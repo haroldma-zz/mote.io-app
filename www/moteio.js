@@ -107,9 +107,7 @@ var App = function () {
               description: text
             };
 
-            console.log(params);
-
-            FB.ui(params, function(obj) { console.log(obj);});
+            FB.ui(params, function(obj) { });
 
           }
 
@@ -159,8 +157,6 @@ var App = function () {
       }
 
       if(type == "select") {
-
-        console.log('!SELECT')
 
         var select_html = $('<select class="render-select"></select>');
 
@@ -285,9 +281,6 @@ var App = function () {
         },
         message: function( message) {
 
-          console.log('got message!')
-          console.log(message);
-
           var data = null;
           if(message.data !== "undefined") {
             data = message.data;
@@ -295,7 +288,6 @@ var App = function () {
 
           if(message.type == 'update-config') {
 
-            console.log('update-config')
             self.renderRemote(data);
 
             self.pubnub.publish({
@@ -374,17 +366,13 @@ var App = function () {
   }
 
   self.pause = function() {
-    console.log('paused');
   }
 
   self.resume = function() {
-    console.log('resumed!');
     self.listen(self.channel_name);
   }
 
   self.init = function () {
-
-    console.log('console')
 
     self.pubnub = PUBNUB.init({
       publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
@@ -401,8 +389,6 @@ var App = function () {
     var data = null;
 
     $("#login-form").submit(function (e) {
-
-      console.log('login form submit')
 
       $('#status-message').html('<p>Logging In...</p>');
       $.mobile.changePage($('#status'));
@@ -438,13 +424,11 @@ var App = function () {
 
             self.listen(response.channel_name);
 
-            console.log('waiting for sync')
             $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');
             $.mobile.changePage($('#status'));
 
           } else {
             $.mobile.changePage($('#login'));
-            console.log(response)
             alert(response.reason);
           }
 
@@ -475,6 +459,10 @@ var App = function () {
         }
       });
 
+    });
+
+    $('.forgot-password').bind('vclick', function(){
+      var ref = window.open('https://mote.io/reset', '_blank');
     });
 
     if(self.get('login')) {
