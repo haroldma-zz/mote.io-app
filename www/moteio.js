@@ -14,14 +14,15 @@ var App = function () {
 
   var self = this;
 
-  //self.remote_location = 'https://localhost:3000';
-  self.remote_location = 'https://mote.io:443';
-  self.channel = null;
+  self.remote_location = 'https://localhost:3000';
+  //self.remote_location = 'https://mote.io:443';
 
+  self.channel = null;
   self.pubnub = null;
   self.channel_name = null;
 
   self.lastNotify = {};
+  self.config = {};
 
   self.set = function(key, data) {
     // Put the object into storage
@@ -47,6 +48,14 @@ var App = function () {
 
   self.renderRemote = function(res) {
 
+    if(typeof res == "undefined" || !res) {
+      alert('Connected to site but window.moteioConfig is not defined on web page.');
+    } else if(typeof res.app_name == "undefined" || !res.app_name) {
+      alert('Please supply an app name in the moteioConfig.')
+    }
+
+    self.config = res;
+
     var
       button_id = 0,
       wrapper = null,
@@ -54,20 +63,14 @@ var App = function () {
       element = null,
       buttons = null;
 
-    if(typeof res == "undefined" || !res) {
-      alert('Connected to site but window.moteioConfig is not defined on web page.');
-    } else if(typeof res.app_name == "undefined" || !res.app_name) {
-      alert('Please supply an app name in the moteioConfig.')
-    }
-
     $('#remote-render').html('');
 
     var id = 0;
 
-    for(var key in res.blocks) {
+    for(var key in self.config.blocks) {
 
-      var type = res.blocks[key].type,
-      params = res.blocks[key];
+      var type = self.config.blocks[key].type,
+        params = self.config.blocks[key];
 
       params._id = id;
       id++;
@@ -76,8 +79,9 @@ var App = function () {
 
       if(type == "notify") {
 
-        wrapper = $('<div class="block"></div>');
-        var notify = $('<div class="notify"></div>');
+        var wrapper = $('<div class="block"></div>'),
+          notify = $('<div class="notify"></div>'),
+          text = null;
 
         $('#remote-render').append(wrapper.append(notify));
 
@@ -87,23 +91,39 @@ var App = function () {
 
         $('.twitter, .facebook').bind('vclick', function(){
 
+          var text = 'I\'m ' + self.config.action + ' to ' + self.lastNotify.line1;
+          if(self.lastNotify.line2) {
+            text += ' - ' + self.lastNotify.line2
+          }
+
+          console.log(self.config)
+
           var url = 'https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url);
           if($(this).hasClass('twitter')) {
-            window.open('http://www.twitter.com/share?url=' + url, '_blank');
+
+            if(typeof self.config.twitter !== "undefined" && self.config.twitter) {
+              text += ' on @' + self.config.twitter;
+            } else {
+              text += ' on ' + $('.ui-title').text();
+            }
+            text += ' ' + self.lastNotify.permalink;
+            text += ' via @getmoteio';
+
+            url = 'http://www.twitter.com/share?text=' + encodeURIComponent(text);
+
+            console.log(url);
+            window.open(url, '_blank');
+
           } else {
 
-            var text = 'I\'m controlling ' + self.lastNotify.line1;
-            if(self.lastNotify.line2) {
-              text += ' - ' + self.lastNotify.line2
-            }
-            text += ' on ' + $('.ui-title').text() + ' with the Mote.io mobile app.';
+            text += ' on ' + $('.ui-title').text() + ' with Mote.io http://mote.io';
 
             var params = {
               method: 'feed',
               name: 'Mote.io',
-              link: url,
+              link: self.lastNotify.permalink,
               picture: 'https://mote.io/images/144-2x.png',
-              caption: 'I\'m controlling ' + $('.ui-title').text() + ' with Mote.io!',
+              caption: text,
               description: text
             };
 
@@ -317,6 +337,7 @@ var App = function () {
             self.lastNotify.line1 = data.line1;
             self.lastNotify.line2 = data.line2;
             self.lastNotify.image = data.image;
+            self.lastNotify.permalink = data.permalink;
             self.lastNotify.url = data.url;
 
           }
