@@ -124,7 +124,7 @@ var App = function () {
               link: self.lastNotify.permalink,
               picture: 'https://mote.io/images/144-2x.png',
               caption: text,
-              description: text
+              description: 'Remote control your favorite sites like' + $('.ui-title').text() + 'with Mote.io'
             };
 
             FB.ui(params, function(obj) { });
