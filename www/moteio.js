@@ -49,9 +49,9 @@ var App = function () {
   self.renderRemote = function(res) {
 
     if(typeof res == "undefined" || !res) {
-      alert('Connected to site but window.moteioConfig is not defined on web page.');
+      alert('Connected to site but window.moteioConfig is not defined on web page.', null, 'Developer Error', 'OK');
     } else if(typeof res.app_name == "undefined" || !res.app_name) {
-      alert('Please supply an app name in the moteioConfig.')
+      alert('Please supply an app name in the moteioConfig.', null, 'Developer Error', 'OK')
     }
 
     self.config = res;
@@ -284,7 +284,7 @@ var App = function () {
         },
         disconnect: function() {
 
-          alert('disconnected')
+          alert('You have been disconnected from the server', null, 'Disconnected!', 'Reconnect Me');
           self.logout();
 
         },
@@ -404,8 +404,8 @@ var App = function () {
     });
 
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
-      alert('Try connecting to a Wifi network, it makes Mote.io faster!')
-    }
+      alert('Connect to a Wifi network if you can.', null, 'Make Mote.io Faster!', 'OK');
+    };
 
     var data = null;
 
@@ -420,7 +420,7 @@ var App = function () {
         statusCode: {
           401: function(){
             // Redirec the to the login page.
-            alert('Error authorizing.')
+            alert('Error authorizing.', null, 'Error!', 'OK');
             $.mobile.changePage($('#login'));
           }
         }
@@ -450,13 +450,13 @@ var App = function () {
 
           } else {
             $.mobile.changePage($('#login'));
-            alert(response.reason);
+            alert(response.reason, null, 'Error!', 'OK');
           }
 
         },
         error: function(xhr, status, err) {
 
-          alert('There was a problem logging you in or the server timed out. Check your username and password.');
+          alert('There was a problem logging you in or the server timed out. Check your username and password.', null, 'Error', 'OK');
           $.mobile.changePage($('#login'));
         }
       });
@@ -476,7 +476,7 @@ var App = function () {
       ref.addEventListener('loadstart', function(event) {
         if(event.url == "https://mote.io/start") {
           ref.close();
-          alert('All signed up! Now log in.');
+          alert('All signed up! Now log in.', null, 'Hurray!', 'OK');
         }
       });
 
