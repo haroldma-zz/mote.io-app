@@ -306,3 +306,28 @@ Terminating in response to SpringBoard's termination.
 2013-08-06 17:42:20.327 Moteio[4413:c07] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/06A28E66-2F18-4CD8-96F1-923455FE0BED/Moteio.app/www/main.html
 2013-08-06 23:00:56.908 Moteio[4413:2803] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
 2013-08-06 23:08:50.934 Moteio[4413:c07] THREAD WARNING: ['InAppBrowser'] took '14.921143' ms. Plugin should use a background thread.
+objc[4273]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-09-23 21:02:41.212 Mote.io[4273:a0b] Cannot find executable for CFBundle 0xc379be0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-09-23 21:02:41.340 Mote.io[4273:a0b] Cannot find executable for CFBundle 0xb65e120 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-09-23 21:02:41.474 Mote.io[4273:a0b] Cannot find executable for CFBundle 0xc156580 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-09-23 21:02:41.543 Mote.io[4273:a0b] Multi-tasking -> Device: YES, App: YES
+2013-09-23 21:02:41.637 Mote.io[4273:a0b] [CDVTimer][splashscreen] 20.036995ms
+2013-09-23 21:02:41.638 Mote.io[4273:a0b] [CDVTimer][TotalPluginStartup] 21.126032ms
+2013-09-23 21:02:42.014 Mote.io[4273:a0b] Resetting plugins due to page load.
+2013-09-23 21:02:42.123 Mote.io[4273:a0b] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/891B4EF0-58CD-4045-A4DA-574FF740C92A/Mote.io.app/www/index.html
+2013-09-23 21:02:42.130 Mote.io[4273:a0b] Resetting plugins due to page load.
+2013-09-23 21:05:42.556 Mote.io[4273:410b] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-09-23 21:05:48.582 Mote.io[4273:a0b] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/891B4EF0-58CD-4045-A4DA-574FF740C92A/Mote.io.app/www/main.html
+objc[4787]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-09-23 21:06:46.851 Mote.io[4787:a0b] Cannot find executable for CFBundle 0xb266700 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-09-23 21:06:46.878 Mote.io[4787:a0b] Cannot find executable for CFBundle 0xb27b7a0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2013-09-23 21:06:46.889 Mote.io[4787:a0b] Cannot find executable for CFBundle 0xb28d5e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-09-23 21:06:47.039 Mote.io[4787:a0b] Multi-tasking -> Device: YES, App: YES
+2013-09-23 21:06:47.102 Mote.io[4787:a0b] [CDVTimer][splashscreen] 18.150032ms
+2013-09-23 21:06:47.103 Mote.io[4787:a0b] [CDVTimer][TotalPluginStartup] 19.268990ms
+2013-09-23 21:06:47.358 Mote.io[4787:a0b] Resetting plugins due to page load.
+2013-09-23 21:06:47.410 Mote.io[4787:a0b] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/891B4EF0-58CD-4045-A4DA-574FF740C92A/Mote.io.app/www/index.html
+2013-09-23 21:06:47.412 Mote.io[4787:a0b] Resetting plugins due to page load.
+2013-09-23 21:59:43.384 Mote.io[4787:440b] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-09-23 21:59:43.448 Mote.io[4787:a0b] Finished load of: file:///Users/Jennings/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/891B4EF0-58CD-4045-A4DA-574FF740C92A/Mote.io.app/www/main.html
+2013-09-23 21:59:43.452 Mote.io[4787:5707] CFNetwork SSLHandshake failed (-9806)

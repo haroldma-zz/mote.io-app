@@ -6,7 +6,25 @@ var io = io || null,
   navigator = navigator || null,
   $ = $ || null,
   device = device,
-  window = window || null;
+  window = window || null,
+  gaPlugin,
+  gaSuccessHandler = function() {
+  },
+  gaErrorHandler = function() {
+  },
+  gaTrackEvent = function(action, label, value, int) {
+    if(typeof window.plugins !== "undefined") {
+      gaPlugin.trackEvent(function(){
+        console.log('GA Success');
+      }, function(){
+        console.log('GA Error');
+      }, action, label, value, int);
+    }
+  };
+
+window.onerror = function(error) {
+  gaTrackEvent("window", "error", "error", 1);
+};
 
 var App = function () {
 
@@ -14,14 +32,12 @@ var App = function () {
 
   var self = this;
 
-  //self.remote_location = 'https://localhost:3000';
-  self.remote_location = 'https://mote.io:443';
   self.channel = null;
-
   self.pubnub = null;
   self.channel_name = null;
 
   self.lastNotify = {};
+  self.config = {};
 
   self.set = function(key, data) {
     // Put the object into storage
@@ -47,6 +63,14 @@ var App = function () {
 
   self.renderRemote = function(res) {
 
+    if(typeof res == "undefined" || !res) {
+      alert('Connected to site but window.moteioConfig is not defined on web page.', null, 'Developer Error', 'OK');
+    } else if(typeof res.app_name == "undefined" || !res.app_name) {
+      alert('Please supply an app name in the moteioConfig.', null, 'Developer Error', 'OK')
+    }
+
+    self.config = res;
+
     var
       button_id = 0,
       wrapper = null,
@@ -54,20 +78,14 @@ var App = function () {
       element = null,
       buttons = null;
 
-    if(typeof res == "undefined" || !res) {
-      alert('Connected to site but window.moteioConfig is not defined on web page.');
-    } else if(typeof res.app_name == "undefined" || !res.app_name) {
-      alert('Please supply an app name in the moteioConfig.')
-    }
-
     $('#remote-render').html('');
 
     var id = 0;
 
-    for(var key in res.blocks) {
+    for(var key in self.config.blocks) {
 
-      var type = res.blocks[key].type,
-      params = res.blocks[key];
+      var type = self.config.blocks[key].type,
+        params = self.config.blocks[key];
 
       params._id = id;
       id++;
@@ -76,8 +94,9 @@ var App = function () {
 
       if(type == "notify") {
 
-        wrapper = $('<div class="block"></div>');
-        var notify = $('<div class="notify"></div>');
+        var wrapper = $('<div class="block"></div>'),
+          notify = $('<div class="notify"></div>'),
+          text = null;
 
         $('#remote-render').append(wrapper.append(notify));
 
@@ -87,27 +106,75 @@ var App = function () {
 
         $('.twitter, .facebook').bind('vclick', function(){
 
-          var url = 'https://mote.io/share?line1=' + encodeURIComponent(self.lastNotify.line1) + '&line2=' + encodeURI(self.lastNotify.line2) + '&image=' + encodeURI(self.lastNotify.image) + '&remote=' + encodeURIComponent($('.ui-title').text()) + '&url=' + encodeURIComponent(self.lastNotify.url);
+          console.log('lastnotify is')
+          console.log(self.lastNotify)
+
+          var url = '';
+          var text = 'I\'m ' + self.config.action;
+          var shoutout = $('.ui-title').text();
+
+          if(typeof self.config.twitter !== "undefined" && self.config.twitter) {
+            shoutout = '@' + self.config.twitter;
+          }
+
+          if(self.lastNotify.line1) {
+            text += ' ' + self.lastNotify.line1;
+          }
+          if(self.lastNotify.line2) {
+            text += ' - ' + self.lastNotify.line2
+          }
+
           if($(this).hasClass('twitter')) {
-            window.open('http://www.twitter.com/share?url=' + url, '_blank');
+
+            text += ' on ' + shoutout;
+            text += ' ' + self.lastNotify.permalink;
+            text += ' via @getmoteio';
+
+            if(typeof self.lastNotify.line1 == "undefined" || self.lastNotify.line1 == "" || !self.lastNotify.line1) {
+              text = 'I\'m controlling ' + shoutout + ' with @getmoteio';
+            }
+
+            url = 'http://www.twitter.com/share?text=' + encodeURIComponent(text);
+
+            gaTrackEvent("share", "twitter-try", text, 1);
+
+            window.open(url, '_blank');
+
           } else {
 
-            var text = 'I\'m controlling ' + self.lastNotify.line1;
-            if(self.lastNotify.line2) {
-              text += ' - ' + self.lastNotify.line2
+            text += ' on ' + $('.ui-title').text() + ' with Mote.io http://mote.io';
+
+            if(typeof self.lastNotify.line1 == "undefined" || self.lastNotify.line1 == "" || !self.lastNotify.line1) {
+              text = 'I\'m controlling ' + $('.ui-title').text();
             }
-            text += ' on ' + $('.ui-title').text() + ' with the Mote.io mobile app.';
+
+            var title = 'I\'m ' + self.config.action + ' ' + $('.ui-title').text();
+            if(self.lastNotify.line1) {
+              title = self.lastNotify.line1;
+            }
+            if(self.lastNotify.line2) {
+              title += ' - ' + self.lastNotify.line2
+            }
+
+            var thumb = 'https://mote.io/images/144-2x.png';
+            if(self.lastNotify.image) {
+              thumb = self.lastNotify.image;
+            }
 
             var params = {
               method: 'feed',
-              name: 'Mote.io',
-              link: url,
-              picture: 'https://mote.io/images/144-2x.png',
-              caption: 'I\'m controlling ' + $('.ui-title').text() + ' with Mote.io!',
-              description: text
+              name: title,
+              link: self.lastNotify.permalink,
+              picture: thumb,
+              caption: text,
+              description: 'Remote control your favorite sites like ' + $('.ui-title').text() + ' with Mote.io'
             };
 
-            FB.ui(params, function(obj) { });
+            gaTrackEvent("share", "facebook-try", title, 1);
+
+            FB.ui(params, function(obj) {
+              gaTrackEvent("share", "facebook-success", title, 1);
+            });
 
           }
 
@@ -133,7 +200,7 @@ var App = function () {
           element = $('<span id="moteio-button-' + data.hash + '" class="moteio-button ui-btn-up-a icon-' + button.icon + '" /></span>')
             .bind('vclick', function (e) {
 
-              navigator.notification.vibrate(300);
+              navigator.notification.vibrate(150);
 
               e.stopPropagation();
 
@@ -254,6 +321,8 @@ var App = function () {
         channel: self.channel_name,
         connect: function() {
 
+          gaTrackEvent("pubnub", "connection", "connect", 1);
+
           self.pubnub.publish({
             channel : self.channel_name,
             message : {
@@ -264,13 +333,14 @@ var App = function () {
         },
         disconnect: function() {
 
-          alert('disconnected')
+          gaTrackEvent("pubnub", "connection", "disconnect", 1);
           self.logout();
 
         },
         reconnect: function() {
 
-          alert('reconnected')
+          gaTrackEvent("pubnub", "connection", "reconnect", 1);
+
           self.pubnub.publish({
             channel : self.channel_name,
             message : {
@@ -280,6 +350,8 @@ var App = function () {
 
         },
         message: function( message) {
+
+          gaTrackEvent("pubnub", "message", message.type, 1);
 
           var data = null;
           if(message.data !== "undefined") {
@@ -305,7 +377,10 @@ var App = function () {
             now_playing.empty();
 
             if (typeof data.image !== "undefined") {
+              $('.notify').addClass('with-thumb');
               now_playing.append('<img src="' + data.image + '" class="thumb" />');
+            } else {
+              $('.notify').removeClass('with-thumb');
             }
             if (typeof data.line1 !== "undefined") {
               now_playing.append('<div class="line line-1">' + data.line1 + '</p>');
@@ -317,6 +392,7 @@ var App = function () {
             self.lastNotify.line1 = data.line1;
             self.lastNotify.line2 = data.line2;
             self.lastNotify.image = data.image;
+            self.lastNotify.permalink = data.permalink;
             self.lastNotify.url = data.url;
 
           }
@@ -341,7 +417,9 @@ var App = function () {
 
       $('.go-home').bind('vclick', function(){
 
-        navigator.notification.vibrate(300);
+        gaTrackEvent("pubnub", "publist", "go-home", 1);
+
+        navigator.notification.vibrate(150);
 
         self.pubnub.publish({
           channel : self.channel_name,
@@ -374,6 +452,15 @@ var App = function () {
 
   self.init = function () {
 
+    if(typeof window.plugins !== "undefined") {
+      gaPlugin = window.plugins.gaPlugin;
+      gaPlugin.init(gaSuccessHandler, gaErrorHandler, "UA-40127738-2", 10);
+    }
+
+    gaTrackEvent("init", "model", device.model, 1);
+    gaTrackEvent("init", "platform", device.platform, 1);
+    gaTrackEvent("init", "version", device.version, 1);
+
     self.pubnub = PUBNUB.init({
       publish_key: 'pub-2cc75d12-3c70-4599-babc-3e1d27fd1ad4',
       subscribe_key: 'sub-cfb3b894-0a2a-11e0-a510-1d92d9e0ffba',
@@ -383,8 +470,9 @@ var App = function () {
     });
 
     if(navigator.connection.type !== Connection.WIFI && navigator.connection.type !== Connection.ETHERNET) {
-      alert('Try connecting to a Wifi network, it makes Mote.io faster!')
-    }
+      // this should show up on /login and update on connection change
+      gaTrackEvent("connection", "type", navigator.connection.type, 1);
+    };
 
     var data = null;
 
@@ -395,11 +483,23 @@ var App = function () {
 
       var data = $(this).serializeArray();
 
+      if(data[0].value == "staging@mote.io") {
+        gaTrackEvent("login", "staging", "try", 1);
+        self.remote_location = 'https://moteiostaging-9163.onmodulus.net';
+      } else if(data[0].value == "localhost@mote.io") {
+        gaTrackEvent("login", "localhost", "try", 1);
+        self.remote_location = 'https://localhost:3000';
+      } else {
+        gaTrackEvent("login", "production", "try", 1);
+        self.remote_location = 'https://mote.io:443';
+      }
+
       $.ajaxSetup({
         statusCode: {
           401: function(){
             // Redirec the to the login page.
-            alert('Error authorizing.')
+            gaTrackEvent("login", "try", "401", 1);
+            alert('Error authorizing.', null, 'Error!', 'OK');
             $.mobile.changePage($('#login'));
           }
         }
@@ -408,34 +508,45 @@ var App = function () {
       $.ajax({
         type: 'post',
         url: self.remote_location + '/post/login',
-        data: $(this).serialize(),
+        data: {
+          'username': data[0].value,
+          'password': data[1].value,
+          'remember-me': data[2].value
+        },
         dataType: 'jsonp',
         timeout: 8000,
         success: function(response) {
 
           if(response.valid) {
 
+            gaTrackEvent("login", "try", "success", 1);
+
             if(data[2].value == "1") {
               self.set('login', data);
+              gaTrackEvent("login", "remember-me", "true", 1);
             } else {
               self.set('login', null)
+              gaTrackEvent("login", "remember-me", "false", 1);
               $('#password').val('');
             }
 
             self.listen(response.channel_name);
 
-            $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer for help.</p>');
+            $('#status-message').html('<p>Syncing...</p><p>Visit <a>http://mote.io/start</a> on your computer to continue.</p>');
             $.mobile.changePage($('#status'));
 
           } else {
+
+            gaTrackEvent("login", "try", "fail", 1);
+
             $.mobile.changePage($('#login'));
-            alert(response.reason);
+            alert(response.reason, null, 'Error!', 'OK');
           }
 
         },
         error: function(xhr, status, err) {
-
-          alert('There was a problem logging you in or the server timed out. Check your username and password.');
+          gaTrackEvent("login", "try", "server-error", 1);
+          alert('There was a problem logging you in or the server timed out. Check your username and password.', null, 'Error', 'OK');
           $.mobile.changePage($('#login'));
         }
       });
@@ -445,23 +556,28 @@ var App = function () {
     });
 
     $('.logout').bind('vclick', function(){
+      gaTrackEvent("logout", "try", "success", 1);
       self.logout();
       $.mobile.changePage($('#login'));
     });
 
     $('.sign-up').bind('vclick', function(){
 
+      gaTrackEvent("signup", "try", "try", 1);
+
       var ref = window.open('https://mote.io/register', '_blank');
       ref.addEventListener('loadstart', function(event) {
         if(event.url == "https://mote.io/start") {
           ref.close();
-          alert('All signed up! Now log in.');
+          alert('All signed up! Now log in.', null, 'Hurray!', 'OK');
+          gaTrackEvent("signup", "try", "success", 1);
         }
       });
 
     });
 
     $('.forgot-password').bind('vclick', function(){
+      gaTrackEvent("login", "forgot-password", "try", 1);
       var ref = window.open('https://mote.io/reset', '_blank');
     });
 
@@ -472,12 +588,13 @@ var App = function () {
       $('#username').val(data[0].value);
       $('#password').val(data[1].value);
       $('#remember-me').val('1').slider('refresh');
-      // $("#login-form").submit();
+      $("#login-form").submit();
 
+    } else {
+      $.mobile.changePage($('#login'));
     }
 
     navigator.splashscreen.hide();
-    $.mobile.changePage($('#login'));
 
   };
 

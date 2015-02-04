@@ -38,7 +38,7 @@ html, body {
   max-width: 100%;
   margin: 30px auto;
   display: block;
-  background-image: url('../images/icons/144.png');
+  background-image: url('../images/icons/login.png');
   width: 144px;
   height: 144px;
   margin-bottom: 45px;
@@ -92,8 +92,10 @@ html, body {
 }
 .notify {
   position: relative;
-  padding-left: 60px;
   height: 50px;
+}
+.notify.with-thumb {
+  padding-left: 60px;
   width: 218px;
 }
 .notify .thumb {
@@ -141,7 +143,13 @@ html, body {
 }
 .header-button {
   border: none !important;
+  top: 4px !important;
 }
 .ui-title {
   font-weight: normal;
+}
+*[id*='mopub-'] {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0px;
 }

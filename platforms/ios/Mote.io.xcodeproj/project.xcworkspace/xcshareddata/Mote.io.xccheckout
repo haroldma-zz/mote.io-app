@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3D9DB480-6D02-4FB2-8930-6FECEF73A764</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mote.io</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>56B93072-EDEC-4EED-BD70-5A1D5A0DA57B</key>
+		<string>https://github.com/ianjennings/mote.io-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Mote.io.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>56B93072-EDEC-4EED-BD70-5A1D5A0DA57B</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ianjennings/mote.io-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>56B93072-EDEC-4EED-BD70-5A1D5A0DA57B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>56B93072-EDEC-4EED-BD70-5A1D5A0DA57B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mote</string>
+		</dict>
+	</array>
+</dict>
+</plist>

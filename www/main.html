@@ -4,8 +4,6 @@
 
 	<title>My Page</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/themes/moteio.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
@@ -26,6 +24,25 @@
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script src="cdv-plugin-fb-connect.js"></script>
 	<script src="facebook-js-sdk.js"></script>
+	<script type="text/javascript" src="GAPlugin.js"></script>
+	<script type="text/javascript">
+		var apps = {
+		  1: 'Google Play Music', 
+		  2: 'Grooveshark', 
+		  3: 'Hype Machine', 
+		  4: 'Last.fm', 
+		  5: 'YouTube', 
+		  6: 'Pandora', 
+		  7: 'Plex', 
+		  8: 'Rdio', 
+		  9: 'SoundCloud', 
+		  10: 'Spotify',
+		  11: 'tunein',
+		  12: 'Twitch.TV',
+		  13: 'Vimeo'
+		};
+		var thisApp = apps[6];
+	</script>
 	<script type="text/javascript" charset="utf-8" src="moteio.js"></script>
 	<!-- http://debug.phonegap.com/client/#moteio -->
 
@@ -80,7 +97,7 @@
 
 			<form id="login-form">
 
-				<input type="text" name="username" id="username" value="" placeholder="Email">
+				<input type="text" name="username" id="username" value="" placeholder="Email" autocapitalize="off">
 				<input type="password" name="password" id="password" value="" autocomplete="off" placeholder="Password">
 
         <select name="remember-me" id="remember-me" data-role="slider">

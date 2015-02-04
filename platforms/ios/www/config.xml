@@ -99,10 +99,12 @@
     <gap:splash src="images/splashes/splash_hdpi-p.png" gap:platform="android" gap:density="hdpi" width="480" height="800" />
     <gap:splash src="images/splashes/splash_xhdpi-p.png" gap:platform="android" gap:density="xhdpi" width="1280" height="720" />
 
-     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
-         <param name="APP_ID" value="163150470537618" />
-         <param name="APP_NAME" value="Mote.io" />
-     </gap:plugin>
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
+        <param name="APP_ID" value="163150470537618" />
+        <param name="APP_NAME" value="Mote.io" />
+    </gap:plugin>
+
+    <gap:plugin name="com.adobe.plugins.gaplugin" version="2.1.1" />
 
     <access origin="*" />
 
